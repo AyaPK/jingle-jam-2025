@@ -11,12 +11,26 @@ config_version=5
 [application]
 
 config/name="JingleJam2025"
+run/main_scene="uid://bfhslpx3f8pml"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Signals="*res://00_autoloads/signal_bus.gd"
 
 [display]
 
 window/stretch/mode="viewport"
+
+[file_customization]
+
+folder_colors={
+"res://00_autoloads/": "blue",
+"res://assets/": "red",
+"res://scenes/": "yellow",
+"res://scripts/": "green"
+}
 
 [rendering]
 
