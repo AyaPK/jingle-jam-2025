@@ -8,6 +8,5 @@ func _ready() -> void:
 		text = " "+demon.demon_name
 		demon_headshot.texture = demon.headshot
 
-
 func _on_pressed() -> void:
 	BattleManager.current_demon = demon

@@ -53,7 +53,7 @@ demon = ExtResource("8_rcqid")
 
 [node name="Button6" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../HBoxContainer/Button2")
+focus_neighbor_bottom = NodePath("../../HBoxContainer/PartnersButton")
 demon = ExtResource("9_1ajci")
 
 [node name="Button7" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
@@ -79,7 +79,7 @@ text = "Skills"
 layout_mode = 2
 text = "                      "
 
-[node name="Button2" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
+[node name="PartnersButton" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HFlowContainer/Button6")
 text = "Partners"

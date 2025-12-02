@@ -1,5 +1,8 @@
 extends Node
 
+var has_any_partners: bool :
+	get: return DEMON_STATES.SEDUCED in demon_states.values()
+
 enum DEMON_STATES {
 	AVAILABLE,
 	BEATEN,
