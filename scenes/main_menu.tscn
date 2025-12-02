@@ -1,20 +1,92 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfhslpx3f8pml"]
+[gd_scene load_steps=6 format=3 uid="uid://bfhslpx3f8pml"]
 
 [ext_resource type="Script" uid="uid://p76dtda487i8" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://dxw33gvq1ji3b" path="res://assets/art/hell.webp" id="2_8ln24"]
+[ext_resource type="PackedScene" uid="uid://8jvy4ghanp55" path="res://scenes/demon_button.tscn" id="2_ekxnf"]
+[ext_resource type="PackedScene" uid="uid://bnjgrcycgkw7" path="res://scenes/MenuButton.tscn" id="3_bqqt6"]
+[ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="4_wu84c"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_l6cm7")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1154.0
+offset_bottom = 647.0
+texture = ExtResource("2_8ln24")
 
-[node name="Label" type="Label" parent="CanvasLayer/PanelContainer"]
+[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer"]
+offset_left = 169.0
+offset_top = 216.0
+offset_right = 1057.0
+offset_bottom = 380.0
+alignment = 1
+
+[node name="Button" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
-text = "Hello World!"
-horizontal_alignment = 1
+
+[node name="Button2" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+layout_mode = 2
+
+[node name="Button3" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+layout_mode = 2
+
+[node name="Button4" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+layout_mode = 2
+
+[node name="Button5" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../../HBoxContainer/Button")
+
+[node name="Button6" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../../HBoxContainer/Button2")
+
+[node name="Button7" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../../HBoxContainer/Button3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 212.0
+offset_top = 466.0
+offset_right = 1011.0
+offset_bottom = 546.0
+size_flags_horizontal = 6
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Button" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../HFlowContainer/Button5")
+text = "Skills"
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "                      "
+
+[node name="Button2" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../HFlowContainer/Button6")
+text = "Partners"
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+text = "                      "
+
+[node name="Button3" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../HFlowContainer/Button7")
+text = "Settings"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 165.0
+offset_top = 58.0
+offset_right = 1308.0
+offset_bottom = 182.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("4_wu84c")
+theme_override_font_sizes/normal_font_size = 120
+bbcode_enabled = true
+text = " [color=red][shake]Damned if you don't!!!![/shake][/color]"

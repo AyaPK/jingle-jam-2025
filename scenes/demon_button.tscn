@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://8jvy4ghanp55"]
+
+[ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="1_aoglj"]
+[ext_resource type="Script" uid="uid://dbbe2itxa61nh" path="res://scenes/demon_button.gd" id="2_73qp5"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(200, 80)
+offset_right = 150.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("1_aoglj")
+theme_override_font_sizes/font_size = 45
+text = "Demon Name"
+script = ExtResource("2_73qp5")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
