@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://b00abhd0jlrli"]
+
+[ext_resource type="Script" uid="uid://lnse1bjx0ipv" path="res://resources/chocolate.gd" id="1_2htaw"]
+[ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/item.gd" id="1_nx340"]
+
+[sub_resource type="Resource" id="Resource_o4w4n"]
+script = ExtResource("1_2htaw")
+metadata/_custom_type_script = "uid://lnse1bjx0ipv"
+
+[resource]
+script = ExtResource("1_nx340")
+item_name = "Chocolate"
+effect = SubResource("Resource_o4w4n")
+metadata/_custom_type_script = "uid://bladufjcc5r0s"
