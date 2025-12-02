@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Signals="*res://00_autoloads/00_signal_bus.gd"
 PlayerManager="*res://00_autoloads/00_player_manager.gd"
+BattleManager="*res://00_autoloads/00_battle_manager.gd"
 
 [display]
 

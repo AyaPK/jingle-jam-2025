@@ -5,11 +5,16 @@
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(200, 80)
-offset_right = 150.0
-offset_bottom = 31.0
+offset_right = 200.0
+offset_bottom = 80.0
 theme_override_fonts/font = ExtResource("1_aoglj")
 theme_override_font_sizes/font_size = 45
-text = "Demon Name"
+text = "Gluttony"
+alignment = 0
 script = ExtResource("2_73qp5")
+
+[node name="DemonHeadshot" type="Sprite2D" parent="."]
+position = Vector2(159, 39)
+scale = Vector2(0.1505757, 0.15057568)
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

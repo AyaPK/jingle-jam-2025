@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Demon" load_steps=3 format=3 uid="uid://g2p05lkbrlkw"]
+
+[ext_resource type="Texture2D" uid="uid://b25vvsux8mvsv" path="res://assets/art/demons/wrath/headshot.png" id="1_a37yd"]
+[ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demon.gd" id="1_jqpd5"]
+
+[resource]
+script = ExtResource("1_jqpd5")
+headshot = ExtResource("1_a37yd")
+demon_name = "Wrath"
+hp = 100
+seduction_target = 250
+entry_text = "ur gay lol >:("
+beaten_text = "ooft... I guess I was the gay one all along >:("
+seduced_text = "omg ur so sexy haha >:("
+lose_text = "loser. >:("
+metadata/_custom_type_script = "uid://cxxo2oqdhj527"

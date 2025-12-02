@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Demon" load_steps=2 format=3 uid="uid://vor6hqiyihqc"]
+
+[ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demon.gd" id="1_wa7or"]
+
+[resource]
+script = ExtResource("1_wa7or")
+demon_name = "Sloth"
+metadata/_custom_type_script = "uid://cxxo2oqdhj527"

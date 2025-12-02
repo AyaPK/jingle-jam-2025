@@ -1,9 +1,11 @@
 class_name Demon extends Resource
 
 @export_category("Assets")
-@export var image: Texture2D
+@export var full_image: Texture2D
+@export var headshot: Texture2D
 
 @export_category("Stats")
+@export var demon_name: String
 @export var hp: int
 @export var seduction_target: int
 
