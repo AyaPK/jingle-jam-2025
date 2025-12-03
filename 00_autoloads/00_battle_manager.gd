@@ -20,6 +20,7 @@ func _ready() -> void:
 func initiate_fight() -> void:
 	_set_up_demon()
 	battle_state = STATES.AWAITING_TURN_CHOICE
+	DialogPanel.push_text(current_demon.entry_text)
 
 func execute_turn() -> void:
 	battle_state = STATES.EXECUTING_TURNS
