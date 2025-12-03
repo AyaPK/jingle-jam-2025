@@ -1,7 +1,17 @@
-extends Node2D
+class_name Battle extends Node2D
 
-@onready var main_buttons_container: HFlowContainer = $CanvasLayer/MainButtonsContainer
-@onready var fight: Button = $CanvasLayer/MainButtonsContainer/Fight
+enum MenuState {
+	HOME,
+	FIGHT,
+	ITEM,
+	FLIRT,
+	PARTNER,
+}
+
+var menu_state = MenuState.HOME;
+
+@onready var main_buttons_container: HFlowContainer = $CanvasLayer/HomeMenu
+@onready var fight: Button = $CanvasLayer/HomeMenu/Fight
 
 func _ready() -> void:
 	$CanvasLayer/Opponent.texture = BattleManager.current_demon.full_image
