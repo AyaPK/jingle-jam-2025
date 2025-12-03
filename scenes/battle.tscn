@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://pf8o20wh7nof"]
+
+[ext_resource type="Script" uid="uid://dx1heefco4bqt" path="res://scripts/battle.gd" id="1_p1qf1"]
+[ext_resource type="Texture2D" uid="uid://35mqgxpe0kjo" path="res://assets/art/battle_background.png" id="2_v7i3o"]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource("1_p1qf1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1154.0
+offset_bottom = 647.0
+texture = ExtResource("2_v7i3o")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -495.75
+offset_top = -248.0
+offset_right = 495.75
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Fight" type="Button" parent="CanvasLayer/HFlowContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Spit Bars"
+
+[node name="Item" type="Button" parent="CanvasLayer/HFlowContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Item"
+
+[node name="Flirt" type="Button" parent="CanvasLayer/HFlowContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Flirt"
+
+[node name="Use Partner" type="Button" parent="CanvasLayer/HFlowContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Get Help"
+
+[node name="Opponent" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(849, 278)
