@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://u5t8wd0vwpvu"]
+
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="1_0qxnw"]
+[ext_resource type="Script" uid="uid://5s2u55hjplwp" path="res://scripts/battle_item_button.gd" id="2_ywwpg"]
+
+[node name="BattleItemButton" type="Button"]
+custom_minimum_size = Vector2(200, 100)
+offset_right = 200.0
+offset_bottom = 100.0
+theme = ExtResource("1_0qxnw")
+text = "Item name :)"
+alignment = 0
+script = ExtResource("2_ywwpg")
+
+[node name="ItemSpriteShadow" type="TextureRect" parent="."]
+modulate = Color(0, 0, 0, 0.60784316)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 20.0
+offset_right = 189.0
+offset_bottom = 89.0
+
+[node name="ItemSprite" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 15.0
+offset_right = 189.0
+offset_bottom = 84.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,19 @@
+class_name BattleItemButton extends Button
+
+var item_resource: Item
+
+@onready var item_sprite: TextureRect = $ItemSprite
+@onready var item_sprite_shadow: TextureRect = $ItemSpriteShadow
+
+func load_item_details() -> void:
+	item_sprite.texture = item_resource.image
+	item_sprite_shadow.texture = item_resource.image
+	print(text)
+	text = item_resource.item_name
+	print(text)
+
+func _on_mouse_entered() -> void:
+	grab_focus()
+
+func _on_pressed() -> void:
+	DialogPanel.push_text("You used the "+item_resource.item_name+"!")

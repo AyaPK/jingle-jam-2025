@@ -27,7 +27,7 @@ texture = ExtResource("2_8ln24")
 offset_left = 132.0
 offset_top = 239.0
 offset_right = 1108.0
-offset_bottom = 487.0
+offset_bottom = 423.0
 alignment = 1
 
 [node name="WrathButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
