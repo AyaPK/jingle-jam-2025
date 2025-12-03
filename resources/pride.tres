@@ -5,4 +5,8 @@
 [resource]
 script = ExtResource("1_do7o1")
 demon_name = "Pride"
+entry_text = "Tell me I'm the greatest"
+beaten_text = "My body is injured, my pride remains intact"
+seduced_text = "Fine, you've earnt it... you can be on top"
+lose_text = "I knew I was the greatest"
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

@@ -5,4 +5,8 @@
 [resource]
 script = ExtResource("1_342qf")
 demon_name = "Lust"
+entry_text = "Huh... kinda cute"
+beaten_text = "Oh... I like that"
+seduced_text = "Come over here and let me show you your prize"
+lose_text = "That ain't hot"
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

@@ -5,4 +5,8 @@
 [resource]
 script = ExtResource("1_wa7or")
 demon_name = "Sloth"
+entry_text = "I woke up for this... you'd better be worth"
+beaten_text = "Back to bed :)"
+seduced_text = "CNC means I can nap during :)	"
+lose_text = "You look so peaceful now! I'll join soon <3"
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

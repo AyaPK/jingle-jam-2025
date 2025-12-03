@@ -5,4 +5,8 @@
 [resource]
 script = ExtResource("1_dqre4")
 demon_name = "Greed"
+entry_text = "Gimme yah money"
+beaten_text = "Fine I give up you can have one of my possesions :("
+seduced_text = "Give it to me"
+lose_text = "You owe me £50"
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

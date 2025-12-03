@@ -5,4 +5,8 @@
 [resource]
 script = ExtResource("1_umu0c")
 demon_name = "Gluttony"
+entry_text = "This isn't my ship"
+beaten_text = "Eugh I need a drink"
+seduced_text = "You can be the captain tonight"
+lose_text = "Give it all to me"
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"
