@@ -30,33 +30,33 @@ offset_right = 1108.0
 offset_bottom = 487.0
 alignment = 1
 
-[node name="Button" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+[node name="WrathButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
 demon = ExtResource("4_rtw2f")
 
-[node name="Button2" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+[node name="GluttonyButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
 demon = ExtResource("5_oa1go")
 
-[node name="Button3" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+[node name="LustButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
 demon = ExtResource("6_tbmy8")
 
-[node name="Button4" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+[node name="EnvyButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
 demon = ExtResource("7_flqon")
 
-[node name="Button5" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+[node name="GreedButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../../HBoxContainer/Button")
 demon = ExtResource("8_rcqid")
 
-[node name="Button6" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+[node name="PrideButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../../HBoxContainer/PartnersButton")
 demon = ExtResource("9_1ajci")
 
-[node name="Button7" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
+[node name="SlothButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../../HBoxContainer/Button3")
 demon = ExtResource("10_7b55j")
@@ -72,7 +72,7 @@ alignment = 1
 
 [node name="Button" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../HFlowContainer/Button5")
+focus_neighbor_top = NodePath("../../HFlowContainer/GreedButton")
 text = "Skills"
 
 [node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
@@ -81,7 +81,7 @@ text = "                      "
 
 [node name="PartnersButton" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../HFlowContainer/Button6")
+focus_neighbor_top = NodePath("../../HFlowContainer/PrideButton")
 text = "Partners"
 
 [node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
@@ -90,7 +90,7 @@ text = "                      "
 
 [node name="Button3" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../HFlowContainer/Button7")
+focus_neighbor_top = NodePath("../../HFlowContainer/SlothButton")
 text = "Settings"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]

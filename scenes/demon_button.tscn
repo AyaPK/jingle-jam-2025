@@ -14,7 +14,7 @@ alignment = 0
 script = ExtResource("2_73qp5")
 
 [node name="DemonHeadshot" type="Sprite2D" parent="."]
-position = Vector2(159, 39)
-scale = Vector2(0.1505757, 0.15057568)
+position = Vector2(161, 40)
+scale = Vector2(0.623822, 0.6238219)
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
