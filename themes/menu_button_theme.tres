@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b7rdkq8l5i5od"]
+
+[ext_resource type="Texture2D" uid="uid://chervc6xtbap8" path="res://assets/art/Border_filled_oranget.png" id="1_w68mn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w68mn"]
+texture = ExtResource("1_w68mn")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+modulate_color = Color(0.3854925, 0.3854925, 0.3854924, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kwxpp"]
+texture = ExtResource("1_w68mn")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sxyrd"]
+texture = ExtResource("1_w68mn")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[resource]
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 10
+Button/styles/focus = SubResource("StyleBoxTexture_w68mn")
+Button/styles/hover = SubResource("StyleBoxTexture_kwxpp")
+Button/styles/normal = SubResource("StyleBoxTexture_sxyrd")

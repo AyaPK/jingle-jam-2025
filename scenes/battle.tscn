@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://pf8o20wh7nof"]
+[gd_scene load_steps=7 format=3 uid="uid://beehljnlageaq"]
 
 [ext_resource type="Script" uid="uid://dx1heefco4bqt" path="res://scripts/battle.gd" id="1_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://35mqgxpe0kjo" path="res://assets/art/battle_background.png" id="2_v7i3o"]
 [ext_resource type="Script" uid="uid://qunvc01altko" path="res://scripts/menu_button.gd" id="3_a12nh"]
 [ext_resource type="Script" uid="uid://8p0qqoffhsh4" path="res://scripts/menu_group.gd" id="3_lpir7"]
-[ext_resource type="Texture2D" uid="uid://bq4i7pv04pr5l" path="res://assets/art/demons/wrath/full.png" id="3_p1qf1"]
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="3_p1qf1"]
+[ext_resource type="Texture2D" uid="uid://bq4i7pv04pr5l" path="res://assets/art/demons/wrath/full.png" id="6_6vh42"]
 
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_p1qf1")
@@ -17,8 +18,11 @@ offset_bottom = 647.0
 texture = ExtResource("2_v7i3o")
 
 [node name="ItemsMenu" type="VFlowContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 375.0
+offset_top = 447.0
+offset_right = 775.0
+offset_bottom = 547.0
+theme = ExtResource("3_p1qf1")
 script = ExtResource("3_lpir7")
 show_in_menu_state = 2
 
@@ -46,6 +50,7 @@ script = ExtResource("3_lpir7")
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_p1qf1")
 text = "Spit Bars"
 script = ExtResource("3_a12nh")
 next_menu = 1
@@ -54,6 +59,7 @@ next_menu = 1
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_p1qf1")
 text = "Item"
 script = ExtResource("3_a12nh")
 next_menu = 2
@@ -62,6 +68,7 @@ next_menu = 2
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_p1qf1")
 text = "Flirt"
 script = ExtResource("3_a12nh")
 next_menu = 3
@@ -70,16 +77,22 @@ next_menu = 3
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("3_p1qf1")
 text = "Get Help"
 script = ExtResource("3_a12nh")
 next_menu = 4
 
 [node name="Opponent" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(849, 278)
-texture = ExtResource("3_p1qf1")
+texture = ExtResource("6_6vh42")
 
+[connection signal="mouse_entered" from="CanvasLayer/ItemsMenu/Back" to="CanvasLayer/ItemsMenu/Back" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/ItemsMenu/Back" to="CanvasLayer/ItemsMenu/Back" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/HomeMenu/Fight" to="CanvasLayer/HomeMenu/Fight" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/HomeMenu/Fight" to="CanvasLayer/HomeMenu/Fight" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/HomeMenu/Item" to="CanvasLayer/HomeMenu/Item" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/HomeMenu/Item" to="CanvasLayer/HomeMenu/Item" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/HomeMenu/Flirt" to="CanvasLayer/HomeMenu/Flirt" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/HomeMenu/Flirt" to="CanvasLayer/HomeMenu/Flirt" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/HomeMenu/Use Partner" to="CanvasLayer/HomeMenu/Use Partner" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/HomeMenu/Use Partner" to="CanvasLayer/HomeMenu/Use Partner" method="_on_pressed"]

@@ -1,11 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnjgrcycgkw7"]
+[gd_scene load_steps=4 format=3 uid="uid://bnjgrcycgkw7"]
 
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="1_f845y"]
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="1_sd4kj"]
+[ext_resource type="Script" uid="uid://b4klxegdjvhka" path="res://scripts/menu_button.gd" id="3_fpmxc"]
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(200, 80)
 offset_right = 200.0
 offset_bottom = 80.0
+theme = ExtResource("1_sd4kj")
 theme_override_fonts/font = ExtResource("1_f845y")
 theme_override_font_sizes/font_size = 45
 text = "Menu Button"
+script = ExtResource("3_fpmxc")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
