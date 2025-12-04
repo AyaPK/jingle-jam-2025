@@ -8,8 +8,8 @@ var insult_dialog_pool: Array[Dialog]
 var seduction_dialog_pool: Array[Dialog]
 
 func _ready() -> void:
-	var chocolate: Item = preload("res://resources/chocolate.tres")
-	var flowers: Item = preload("res://resources/flowers.tres")
+	var chocolate: Item = preload("res://resources/items/chocolate.tres")
+	var flowers: Item = preload("res://resources/items/flowers.tres")
 	inventory.append(chocolate)
 	inventory.append(flowers)
 	
