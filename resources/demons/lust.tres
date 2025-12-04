@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=2 format=3 uid="uid://cgdn105ouf4xy"]
+[gd_resource type="Resource" script_class="Demon" load_steps=4 format=3 uid="uid://cgdn105ouf4xy"]
 
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_342qf"]
+[ext_resource type="Texture2D" uid="uid://lwxu1qmdih4i" path="res://assets/art/demons/lust/lust.png" id="1_xuqwj"]
+[ext_resource type="Texture2D" uid="uid://mtrj47odsqyb" path="res://assets/art/demons/lust/lust_headshot.png" id="2_dvtwb"]
 
 [resource]
 script = ExtResource("1_342qf")
+full_image = ExtResource("1_xuqwj")
+headshot = ExtResource("2_dvtwb")
 demon_name = "Lust"
 entry_text = "Huh... kinda cute"
 beaten_text = "Oh... I like that"

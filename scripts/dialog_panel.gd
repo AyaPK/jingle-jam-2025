@@ -1,6 +1,6 @@
 extends Node2D
 
-var text_queue: Array[String] = []
+var text_queue: Array = []
 var current_text: String = ""
 
 var reveal_speed: float = 150.0
@@ -9,13 +9,15 @@ var _is_revealing: bool = false
 
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var label: RichTextLabel = $CanvasLayer/TextureRect/Label
+@onready var demon_face: Sprite2D = $CanvasLayer/DemonFace
+@onready var texture_rect: PanelContainer = $CanvasLayer/TextureRect
 
 func _ready() -> void:
 	label.text = ""
 	canvas_layer.hide()
 
-func push_text(text: String) -> void:
-	text_queue.append(text)
+func push_text(text: String, demon: Demon = null) -> void:
+	text_queue.append([text, demon])
 	if not canvas_layer.visible:
 		Signals.dialog_started.emit()
 		_show_next_from_queue()
@@ -29,8 +31,24 @@ func _show_next_from_queue() -> void:
 		_revealed_chars = 0
 		Signals.dialog_finished.emit()
 		return
-
-	current_text = text_queue.pop_front()
+	
+	var demon: Demon = text_queue[0][1]
+	print(demon)
+	print(text_queue[0])
+	current_text = text_queue.pop_front()[0]
+	var sb = texture_rect.get("theme_override_styles/panel")
+	sb = sb.duplicate()
+	if demon:
+		demon_face.texture = demon.headshot
+		sb.expand_margin_left = 150
+		texture_rect.size.x = 800
+		texture_rect.global_position.x = 243
+	else:
+		demon_face.texture = null
+		sb.expand_margin_left = 16
+		texture_rect.size.x = 934
+		texture_rect.global_position.x = 109
+	texture_rect.set("theme_override_styles/panel", sb)
 	_revealed_chars = 0
 	_is_revealing = true
 	label.text = ""

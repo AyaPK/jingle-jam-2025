@@ -30,7 +30,7 @@ layer = 4
 [node name="TextureRect" type="PanelContainer" parent="CanvasLayer"]
 offset_left = 243.0
 offset_top = 476.0
-offset_right = 1043.0
+offset_right = 1049.0
 offset_bottom = 606.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ainys")
 
