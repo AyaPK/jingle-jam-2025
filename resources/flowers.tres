@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b0wnp4o2ftflm"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://b0wnp4o2ftflm"]
 
 [ext_resource type="Texture2D" uid="uid://cfi7gco8tptsm" path="res://assets/art/items/flowers.png" id="1_suk0v"]
+[ext_resource type="Script" uid="uid://bf8r1rvmiuhmt" path="res://resources/flowers.gd" id="1_v8b85"]
 [ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/item.gd" id="1_x6jjt"]
+
+[sub_resource type="Resource" id="Resource_4ky05"]
+script = ExtResource("1_v8b85")
+metadata/_custom_type_script = "uid://bf8r1rvmiuhmt"
 
 [resource]
 script = ExtResource("1_x6jjt")
 item_name = "Flowers"
 image = ExtResource("1_suk0v")
+effect = SubResource("Resource_4ky05")
 metadata/_custom_type_script = "uid://bladufjcc5r0s"
