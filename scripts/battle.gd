@@ -24,8 +24,8 @@ func _ready() -> void:
 	
 	_load_item_buttons()
 	
-	Signals.dialog_finished.connect(show_main_buttons)
-	Signals.dialog_started.connect(_hide_menu)
+	Signals.battle_turns_started.connect(_hide_menu)
+	Signals.battle_turns_finished.connect(show_main_buttons)
 
 func show_main_buttons() -> void:
 	fight.grab_focus()

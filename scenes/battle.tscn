@@ -48,36 +48,6 @@ theme = ExtResource("3_p1qf1")
 text = "Back"
 script = ExtResource("3_a12nh")
 
-[node name="FlirtMenu" type="CanvasLayer" parent="CanvasLayer" node_paths=PackedStringArray("first_button")]
-script = ExtResource("3_lpir7")
-show_in_menu_state = 3
-first_button = NodePath("Back")
-
-[node name="Back" type="Button" parent="CanvasLayer/FlirtMenu"]
-custom_minimum_size = Vector2(400, 100)
-offset_left = 403.0
-offset_top = 442.0
-offset_right = 803.0
-offset_bottom = 542.0
-size_flags_horizontal = 3
-text = "Back"
-script = ExtResource("3_a12nh")
-
-[node name="HelpMenu" type="CanvasLayer" parent="CanvasLayer" node_paths=PackedStringArray("first_button")]
-script = ExtResource("3_lpir7")
-show_in_menu_state = 4
-first_button = NodePath("Back")
-
-[node name="Back" type="Button" parent="CanvasLayer/HelpMenu"]
-custom_minimum_size = Vector2(400, 100)
-offset_left = 401.0
-offset_top = 444.0
-offset_right = 801.0
-offset_bottom = 544.0
-size_flags_horizontal = 3
-text = "Back"
-script = ExtResource("3_a12nh")
-
 [node name="FightMenu" type="CanvasLayer" parent="CanvasLayer" node_paths=PackedStringArray("first_button")]
 script = ExtResource("3_lpir7")
 show_in_menu_state = 1
@@ -98,10 +68,10 @@ script = ExtResource("3_lpir7")
 first_button = NodePath("HFlowContainer/Fight")
 
 [node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer/HomeMenu"]
-offset_left = 201.0
-offset_top = 392.0
-offset_right = 1011.0
-offset_bottom = 596.0
+offset_left = 202.0
+offset_top = 440.0
+offset_right = 1012.0
+offset_bottom = 644.0
 
 [node name="Fight" type="Button" parent="CanvasLayer/HomeMenu/HFlowContainer"]
 custom_minimum_size = Vector2(400, 100)
@@ -121,41 +91,15 @@ text = "Item"
 script = ExtResource("3_a12nh")
 next_menu = 2
 
-[node name="Flirt" type="Button" parent="CanvasLayer/HomeMenu/HFlowContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("3_p1qf1")
-text = "Flirt"
-script = ExtResource("3_a12nh")
-next_menu = 3
-
-[node name="Use Partner" type="Button" parent="CanvasLayer/HomeMenu/HFlowContainer"]
-custom_minimum_size = Vector2(400, 100)
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("3_p1qf1")
-text = "Get Help"
-script = ExtResource("3_a12nh")
-next_menu = 4
-
 [node name="Opponent" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(849, 278)
 texture = ExtResource("6_6vh42")
 
 [connection signal="mouse_entered" from="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" to="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" to="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" method="_on_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/FlirtMenu/Back" to="CanvasLayer/FlirtMenu/Back" method="_on_mouse_entered"]
-[connection signal="pressed" from="CanvasLayer/FlirtMenu/Back" to="CanvasLayer/FlirtMenu/Back" method="_on_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/HelpMenu/Back" to="CanvasLayer/HelpMenu/Back" method="_on_mouse_entered"]
-[connection signal="pressed" from="CanvasLayer/HelpMenu/Back" to="CanvasLayer/HelpMenu/Back" method="_on_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/FightMenu/Back" to="CanvasLayer/FightMenu/Back" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/FightMenu/Back" to="CanvasLayer/FightMenu/Back" method="_on_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/HomeMenu/HFlowContainer/Fight" to="CanvasLayer/HomeMenu/HFlowContainer/Fight" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/HomeMenu/HFlowContainer/Fight" to="CanvasLayer/HomeMenu/HFlowContainer/Fight" method="_on_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/HomeMenu/HFlowContainer/Item" to="CanvasLayer/HomeMenu/HFlowContainer/Item" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/HomeMenu/HFlowContainer/Item" to="CanvasLayer/HomeMenu/HFlowContainer/Item" method="_on_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/HomeMenu/HFlowContainer/Flirt" to="CanvasLayer/HomeMenu/HFlowContainer/Flirt" method="_on_mouse_entered"]
-[connection signal="pressed" from="CanvasLayer/HomeMenu/HFlowContainer/Flirt" to="CanvasLayer/HomeMenu/HFlowContainer/Flirt" method="_on_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/HomeMenu/HFlowContainer/Use Partner" to="CanvasLayer/HomeMenu/HFlowContainer/Use Partner" method="_on_mouse_entered"]
-[connection signal="pressed" from="CanvasLayer/HomeMenu/HFlowContainer/Use Partner" to="CanvasLayer/HomeMenu/HFlowContainer/Use Partner" method="_on_pressed"]

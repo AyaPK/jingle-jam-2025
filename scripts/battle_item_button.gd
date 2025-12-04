@@ -8,12 +8,11 @@ var item_resource: Item
 func load_item_details() -> void:
 	item_sprite.texture = item_resource.image
 	item_sprite_shadow.texture = item_resource.image
-	print(text)
 	text = item_resource.item_name
-	print(text)
 
 func _on_mouse_entered() -> void:
 	grab_focus()
 
 func _on_pressed() -> void:
-	DialogPanel.push_text("You used the "+item_resource.item_name+"!")
+	BattleManager.turn_queue.append(item_resource)
+	Signals.battle_turns_started.emit()

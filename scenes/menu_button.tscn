@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="1_f845y"]
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="1_sd4kj"]
-[ext_resource type="Script" uid="uid://b4klxegdjvhka" path="res://scripts/menu_button.gd" id="3_fpmxc"]
+[ext_resource type="Script" uid="uid://qunvc01altko" path="res://scripts/menu_button.gd" id="3_fpmxc"]
 
 [node name="Button" type="Button"]
 custom_minimum_size = Vector2(200, 80)
