@@ -15,4 +15,3 @@ func trigger() -> void:
 	elif demon_name in ["Greed"]:
 		BattleManager.demon_seduction -= 50
 		DialogPanel.push_text(demon_name+": So you give me a temporary gift? This is what you think of me?")
-	

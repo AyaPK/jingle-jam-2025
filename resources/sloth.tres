@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=2 format=3 uid="uid://vor6hqiyihqc"]
+[gd_resource type="Resource" script_class="Demon" load_steps=4 format=3 uid="uid://vor6hqiyihqc"]
 
+[ext_resource type="Texture2D" uid="uid://tioakh6g210i" path="res://assets/art/demons/sloth/Sloth_bottom.png" id="1_210sc"]
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demon.gd" id="1_wa7or"]
+[ext_resource type="Texture2D" uid="uid://cwxggw43ef30v" path="res://assets/art/demons/sloth/Sloth_headshot.png" id="2_a5a3f"]
 
 [resource]
 script = ExtResource("1_wa7or")
+full_image = ExtResource("1_210sc")
+headshot = ExtResource("2_a5a3f")
 demon_name = "Sloth"
 entry_text = "I woke up for this... you'd better be worth"
 beaten_text = "Back to bed :)"
