@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Demon" load_steps=4 format=3 uid="uid://g2p05lkbrlkw"]
 
 [ext_resource type="Texture2D" uid="uid://b0hipjfm1x7jj" path="res://assets/art/demons/wrath/headshot.png" id="1_a37yd"]
-[ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demon.gd" id="1_jqpd5"]
+[ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_jqpd5"]
 [ext_resource type="Texture2D" uid="uid://bq4i7pv04pr5l" path="res://assets/art/demons/wrath/full.png" id="1_owop7"]
 
 [resource]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://b00abhd0jlrli"]
 
-[ext_resource type="Script" uid="uid://lnse1bjx0ipv" path="res://resources/chocolate.gd" id="1_2htaw"]
-[ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/item.gd" id="1_nx340"]
+[ext_resource type="Script" uid="uid://lnse1bjx0ipv" path="res://resources/items/chocolate.gd" id="1_2htaw"]
+[ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/items/item.gd" id="1_nx340"]
 [ext_resource type="Texture2D" uid="uid://bykul1bl5x6lt" path="res://assets/art/items/chocolate.png" id="2_o4w4n"]
 
 [sub_resource type="Resource" id="Resource_2htaw"]
