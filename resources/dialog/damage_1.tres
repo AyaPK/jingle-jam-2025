@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bssh6eqxpgusb"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_s3fxw"]
+
+[resource]
+script = ExtResource("1_s3fxw")
+name = "Your best? Pathetic"
+dialog_text = "Is that really your best? I’ve met imps with more bite than you."
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

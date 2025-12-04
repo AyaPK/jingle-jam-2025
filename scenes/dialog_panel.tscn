@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://jur7qo1bbma2"]
 
 [ext_resource type="Texture2D" uid="uid://ds5u8i5fpu1h" path="res://assets/art/Border_filled.png" id="1_ainys"]
-[ext_resource type="Script" uid="uid://dclldfpru0r0v" path="res://scripts/dialog_panel.gd" id="1_rbol1"]
+[ext_resource type="Script" path="res://scripts/dialog_panel.gd" id="1_rbol1"]
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="3_u10g5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ainys"]

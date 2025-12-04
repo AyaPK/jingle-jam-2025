@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://c82tdwis81l42"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_2yopd"]
+
+[resource]
+script = ExtResource("1_2yopd")
+name = "Fragile"
+dialog_text = "You fall apart the second someone doesn’t bow to you. How fragile."
+damage = 17
+seduction = 5
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"
