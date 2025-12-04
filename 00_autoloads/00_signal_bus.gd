@@ -10,4 +10,8 @@ signal dialog_line_started(text: String)
 signal menu_state_changed(old_state: Battle.MenuState, new_state: Battle.MenuState)
 signal battle_turns_started
 signal battle_turns_finished
+signal battle_player_lost
+signal battle_demon_beaten
+signal battle_demon_seduced
+signal battle_left
 #endregion

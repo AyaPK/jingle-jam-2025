@@ -17,7 +17,7 @@ var turn_queue: Array = []
 func _ready() -> void:
 	battle_state = STATES.NOT_IN_BATTLE
 	Signals.battle_turns_started.connect(execute_turn)
-	
+
 func initiate_fight() -> void:
 	_set_up_demon()
 	battle_state = STATES.AWAITING_TURN_CHOICE
@@ -27,15 +27,31 @@ func initiate_fight() -> void:
 
 func execute_turn() -> void:
 	battle_state = STATES.EXECUTING_TURNS
+	var battle_over = true
 	for turn in turn_queue:
 		if turn is Item:
 			turn.effect.trigger()
 		await Signals.dialog_finished
 		turn_queue.pop_at(0)
-	finish_turn()
+		# hp/seduction checks in to battleover state
+		if PlayerManager.hp == 0:
+			_player_lost()
+			battle_over = false
+			break
+		elif demon_hp == 0:
+			_demon_beaten()
+			battle_over = false
+			break
+		elif demon_seduction == current_demon.seduction_target:
+			_demon_seduced()
+			battle_over = false
+			break
+	if battle_over:
+		_end_battle()
+	else:
+		_finish_turn()
 
-func finish_turn() -> void:
-	# hp/seduction checks in to battleover state
+func _finish_turn() -> void:
 	battle_state = STATES.AWAITING_TURN_CHOICE
 	Signals.battle_turns_finished.emit()
 	print("End of turn state: HP = "+str(demon_hp)+"  -  Seduction = "+str(demon_seduction))
@@ -44,5 +60,25 @@ func _set_up_demon() -> void:
 	demon_hp = current_demon.hp
 	demon_seduction = 0
 
+func _player_lost() -> void:
+	# TODO: Demon lose text
+	await Signals.dialog_finished
+	Signals.battle_player_lost.emit()
+
+func _demon_beaten() -> void:
+	# TODO: Demon beaten text
+	await Signals.dialog_finished
+	Signals.battle_demon_beaten.emit()
+
+func _demon_seduced() -> void:
+	# TODO: Demon seduced text
+	await Signals.dialog_finished
+	Signals.battle_demon_seduced.emit()
+
+func _end_battle() -> void:
+	battle_state = STATES.BATTLE_OVER
+
 func leave_battle() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	Signals.battle_left.emit()
 	battle_state = STATES.NOT_IN_BATTLE
