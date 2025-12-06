@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_umu0c")
-demon_name = "Gluttony"
+demon_name = "Solmera"
 hp = 100
 seduction_target = 100
 entry_text = "This isn't my ship"

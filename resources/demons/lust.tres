@@ -8,7 +8,7 @@
 script = ExtResource("1_342qf")
 full_image = ExtResource("1_xuqwj")
 headshot = ExtResource("2_dvtwb")
-demon_name = "Lust"
+demon_name = "Lustria"
 hp = 100
 seduction_target = 100
 entry_text = "Huh... kinda cute"

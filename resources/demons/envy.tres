@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_hqoho")
-demon_name = "Envy"
+demon_name = "Covillette"
 hp = null
 seduction_target = null
 entry_text = "Oh you think you're hot shit"

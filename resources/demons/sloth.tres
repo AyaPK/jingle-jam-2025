@@ -8,7 +8,7 @@
 script = ExtResource("1_wa7or")
 full_image = ExtResource("1_210sc")
 headshot = ExtResource("2_a5a3f")
-demon_name = "Sloth"
+demon_name = "Letharn"
 entry_text = "I woke up for this... you'd better be worth"
 beaten_text = "Back to bed :)"
 seduced_text = "CNC means I can nap during :)	"

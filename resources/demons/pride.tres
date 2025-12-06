@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_do7o1")
-demon_name = "Pride"
+demon_name = "Vanegoris"
 entry_text = "Tell me I'm the greatest"
 beaten_text = "My body is injured, my pride remains intact"
 seduced_text = "Fine, you've earnt it... you can be on top"
