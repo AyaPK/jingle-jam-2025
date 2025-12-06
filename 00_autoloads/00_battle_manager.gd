@@ -12,7 +12,7 @@ enum STATES {
 }
 
 var battle_state: STATES
-var turn_queue: Array = []
+var player_turn
 
 func _ready() -> void:
 	battle_state = STATES.NOT_IN_BATTLE
@@ -27,37 +27,40 @@ func initiate_fight() -> void:
 
 func execute_turn() -> void:
 	battle_state = STATES.EXECUTING_TURNS
-	var battle_over = false
-	for turn in turn_queue:
-		if turn is Item:
-			turn.effect.trigger()
-		elif turn is Dialog:
-			DialogPanel.push_text("You: "+turn.dialog_text)
-			demon_hp -= turn.damage
-			demon_seduction += turn.seduction
-			if turn.type == Dialog.DIALOG_TYPE.ATTACK:
-				AudioManager.play_sfx("hit")
-			else:
-				AudioManager.play_sfx("seduce")
-		await Signals.dialog_finished
-		turn_queue.pop_at(0)
-		# hp/seduction checks in to battleover state
-		if PlayerManager.hp <= 0:
-			_player_lost()
-			battle_over = true
-			break
-		elif demon_hp <= 0:
-			_demon_beaten()
-			battle_over = true
-			break
-		elif demon_seduction >= current_demon.seduction_target:
-			_demon_seduced()
-			battle_over = true
-			break
-	if battle_over:
-		_end_battle()
-	else:
-		_finish_turn()
+	var demon_turn = _get_demon_turn()
+	
+	# Player turn
+	if player_turn is Item:
+		player_turn.effect.trigger()
+	elif player_turn is Dialog:
+		DialogPanel.push_text("You: "+player_turn.dialog_text)
+		demon_hp -= player_turn.damage
+		demon_seduction += player_turn.seduction
+		if player_turn.type == Dialog.DIALOG_TYPE.ATTACK:
+			AudioManager.play_sfx("hit")
+		else:
+			AudioManager.play_sfx("seduce")
+	await Signals.dialog_finished
+	
+	# Battle end checks?
+	if demon_hp <= 0:
+		_demon_beaten()
+		return
+	elif demon_seduction >= current_demon.seduction_target:
+		_demon_seduced()
+		return
+	
+	# Demon turn
+	DialogPanel.push_text(demon_turn.dialog_text, current_demon)
+	PlayerManager.hp -= demon_turn.damage
+	await Signals.dialog_finished
+	
+	# Battle end check?
+	if PlayerManager.hp <= 0:
+		_player_lost()
+		return
+		
+	_finish_turn()
 
 func _finish_turn() -> void:
 	battle_state = STATES.AWAITING_TURN_CHOICE
@@ -72,20 +75,21 @@ func _player_lost() -> void:
 	DialogPanel.push_text(current_demon.lose_text, current_demon)
 	await Signals.dialog_finished
 	Signals.battle_player_lost.emit()
+	_end_battle()
 
 func _demon_beaten() -> void:
 	DialogPanel.push_text(current_demon.beaten_text, current_demon)
 	await Signals.dialog_finished
 	Signals.battle_demon_beaten.emit()
+	_end_battle()
 
 func _demon_seduced() -> void:
 	DialogPanel.push_text(current_demon.seduced_text, current_demon)
 	await Signals.dialog_finished
 	Signals.battle_demon_seduced.emit()
+	_end_battle()
 
 func _end_battle() -> void:
-	if DialogPanel.dialog_visible:
-		await Signals.dialog_finished
 	Signals.battle_end.emit()
 	battle_state = STATES.BATTLE_OVER
 
@@ -130,7 +134,6 @@ func get_dialog_options() -> Array:
 
 	return results
 
-
 func _choose_weighted_dialog(pool: Array) -> Dialog:
 	var weighted: Array = []
 
@@ -157,3 +160,7 @@ func _pick_any_unique(pool: Array, existing: Array) -> Dialog:
 			return dialog
 	# If pool is too small, return ANY dialog (shows a warning condition)
 	return pool[0]
+
+func _get_demon_turn() -> Dialog:
+	# TODO: More complicated logic here?
+	return current_demon.battle_dialog.pick_random()

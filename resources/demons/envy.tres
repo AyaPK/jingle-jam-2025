@@ -1,15 +1,15 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=2 format=3 uid="uid://1eex4uu1o3kj"]
+[gd_resource type="Resource" script_class="Demon" load_steps=4 format=3 uid="uid://1eex4uu1o3kj"]
 
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_hqoho"]
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_urf2m"]
+[ext_resource type="Resource" uid="uid://xjl2om7q5hjs" path="res://resources/dialog/envy/envy_dialog_1.tres" id="2_jmi2a"]
 
 [resource]
 script = ExtResource("1_hqoho")
 demon_name = "Envy"
-hp = null
-seduction_target = null
 entry_text = "Oh you think you're hot shit"
 beaten_text = "God damn, you were hot shit"
 seduced_text = "I hope I have you all to myself"
 lose_text = "I wish I was more like you"
-battle_dialog = [null]
+battle_dialog = Array[ExtResource("1_urf2m")]([ExtResource("2_jmi2a")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

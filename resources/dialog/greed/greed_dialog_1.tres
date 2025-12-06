@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://y5vlqieebl3g"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_lf43q"]
+
+[resource]
+script = ExtResource("1_lf43q")
+name = "I'll take what I want"
+dialog_text = "Oh, you’re cute… in a bargain-bin sort of way. I’d pick you up if I thought you had any value, but maybe I’ll just take what I want and leave you with the emotional change"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

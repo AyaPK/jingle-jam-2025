@@ -3,7 +3,7 @@ class_name DialogButton extends Button
 var dialog_resource: Dialog
 
 func _on_pressed() -> void:
-	BattleManager.turn_queue.append(dialog_resource)
+	BattleManager.player_turn = dialog_resource
 	Signals.battle_turns_started.emit()
 	AudioManager.play_sfx("press_button")
 

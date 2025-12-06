@@ -9,7 +9,7 @@ enum MenuState {
 	HIDDEN,
 	BATTLE_OVER
 }
-\
+
 var menu_state = MenuState.HOME;
 
 @onready var main_buttons_container: CanvasLayer = $CanvasLayer/HomeMenu

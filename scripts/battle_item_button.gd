@@ -15,6 +15,6 @@ func _on_mouse_entered() -> void:
 	AudioManager.play_sfx("hover_button")
 
 func _on_pressed() -> void:
-	BattleManager.turn_queue.append(item_resource)
+	BattleManager.player_turn = item_resource
 	Signals.battle_turns_started.emit()
 	AudioManager.play_sfx("give_gift")
