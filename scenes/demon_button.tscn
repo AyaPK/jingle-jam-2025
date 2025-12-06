@@ -19,5 +19,7 @@ script = ExtResource("2_73qp5")
 position = Vector2(161, 40)
 scale = Vector2(0.623822, 0.6238219)
 
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

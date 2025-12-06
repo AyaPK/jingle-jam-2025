@@ -35,6 +35,12 @@ func seduce_demon() -> void:
 	var demon = BattleManager.current_demon
 	demon_states[demon.demon_name] = DEMON_STATES.SEDUCED
 
+func demon_is_seduced(demon_name) -> bool:
+	return demon_states[demon_name] == DEMON_STATES.SEDUCED
+
+func demon_is_beaten(demon_name) -> bool:
+	return demon_states[demon_name] == DEMON_STATES.BEATEN
+
 func process_battle_left() -> void:
 	if !has_pending_demons:
 		# TODO: Process game end
