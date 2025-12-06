@@ -26,13 +26,13 @@ enum DEMON_STATES {
 }
 
 var demon_states: Dictionary = {
-	ENVY.internal_name: DEMON_STATES.SEDUCED,
-	GLUTTONY.internal_name: DEMON_STATES.SEDUCED,
+	ENVY.internal_name: DEMON_STATES.AVAILABLE,
+	GLUTTONY.internal_name: DEMON_STATES.AVAILABLE,
 	GREED.internal_name: DEMON_STATES.AVAILABLE,
 	LUST.internal_name: DEMON_STATES.AVAILABLE,
 	PRIDE.internal_name: DEMON_STATES.AVAILABLE,
 	SLOTH.internal_name: DEMON_STATES.AVAILABLE,
-	WRATH.internal_name: DEMON_STATES.SEDUCED
+	WRATH.internal_name: DEMON_STATES.AVAILABLE
 }
 
 func _ready() -> void:
