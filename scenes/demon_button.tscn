@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dbbe2itxa61nh" path="res://scenes/demon_button.gd" id="2_73qp5"]
 
 [node name="Button" type="Button"]
-custom_minimum_size = Vector2(210, 90)
+custom_minimum_size = Vector2(220, 90)
 offset_right = 200.0
 offset_bottom = 80.0
 theme = ExtResource("1_gnra7")
@@ -16,7 +16,7 @@ alignment = 0
 script = ExtResource("2_73qp5")
 
 [node name="DemonHeadshot" type="Sprite2D" parent="."]
-position = Vector2(161, 40)
+position = Vector2(173, 40)
 scale = Vector2(0.623822, 0.6238219)
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
