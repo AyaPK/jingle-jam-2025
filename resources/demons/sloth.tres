@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="Demon" load_steps=6 format=3 uid="uid://vor6hqiyihqc"]
 
-[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_3gt25"]
 [ext_resource type="Texture2D" uid="uid://tioakh6g210i" path="res://assets/art/demons/sloth/Sloth_bottom.png" id="1_210sc"]
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_wa7or"]
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_wwao2"]
@@ -17,5 +16,5 @@ entry_text = "I woke up for this... you'd better be worth"
 beaten_text = "Back to bed :)"
 seduced_text = "CNC means I can nap during :)	"
 lose_text = "You look so peaceful now! I'll join soon <3"
-battle_dialog = Array[ExtResource("1_3gt25")]([ExtResource("2_kk7ca")])
+battle_dialog = Array[ExtResource("1_wwao2")]([ExtResource("2_kk7ca")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

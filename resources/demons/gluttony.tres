@@ -8,8 +8,6 @@
 script = ExtResource("1_umu0c")
 internal_name = "Gluttony"
 demon_name = "Solmera"
-hp = 100
-seduction_target = 100
 entry_text = "This isn't my ship"
 beaten_text = "Eugh I need a drink"
 seduced_text = "You can be the captain tonight"

@@ -1,10 +1,23 @@
 extends Node
 
+const ENVY = preload("res://resources/demons/envy.tres")
+const GLUTTONY = preload("res://resources/demons/gluttony.tres")
+const GREED = preload("res://resources/demons/greed.tres")
+const LUST = preload("res://resources/demons/lust.tres")
+const PRIDE = preload("res://resources/demons/pride.tres")
+const SLOTH = preload("res://resources/demons/sloth.tres")
+const WRATH = preload("res://resources/demons/wrath.tres")
+
+var all_demons: Array[Demon] = [ENVY, GLUTTONY, GREED, LUST, PRIDE, SLOTH, WRATH]
+
 var has_any_partners: bool :
 	get: return DEMON_STATES.SEDUCED in demon_states.values()
 
-var has_pending_demons: bool :
+var has_available_demons: bool :
 	get: return DEMON_STATES.AVAILABLE in demon_states.values()
+
+var seduced_demons: Array[Demon]:
+	get: return all_demons.filter(demon_is_seduced)
 
 enum DEMON_STATES {
 	AVAILABLE,
@@ -13,13 +26,13 @@ enum DEMON_STATES {
 }
 
 var demon_states: Dictionary = {
-	"Wrath": DEMON_STATES.AVAILABLE,
-	"Lust": DEMON_STATES.AVAILABLE,
-	"Greed": DEMON_STATES.AVAILABLE,
-	"Gluttony": DEMON_STATES.AVAILABLE,
-	"Pride": DEMON_STATES.AVAILABLE,
-	"Sloth": DEMON_STATES.AVAILABLE,
-	"Envy": DEMON_STATES.AVAILABLE
+	ENVY.internal_name: DEMON_STATES.AVAILABLE,
+	GLUTTONY.internal_name: DEMON_STATES.AVAILABLE,
+	GREED.internal_name: DEMON_STATES.AVAILABLE,
+	LUST.internal_name: DEMON_STATES.AVAILABLE,
+	PRIDE.internal_name: DEMON_STATES.AVAILABLE,
+	SLOTH.internal_name: DEMON_STATES.AVAILABLE,
+	WRATH.internal_name: DEMON_STATES.AVAILABLE
 }
 
 func _ready() -> void:
@@ -35,14 +48,14 @@ func seduce_demon() -> void:
 	var demon = BattleManager.current_demon
 	demon_states[demon.internal_name] = DEMON_STATES.SEDUCED
 
-func demon_is_seduced(demon_name) -> bool:
-	return demon_states[demon_name] == DEMON_STATES.SEDUCED
+func demon_is_seduced(demon: Demon) -> bool:
+	return demon_states[demon.internal_name] == DEMON_STATES.SEDUCED
 
-func demon_is_beaten(demon_name) -> bool:
-	return demon_states[demon_name] == DEMON_STATES.BEATEN
+func demon_is_beaten(demon: Demon) -> bool:
+	return demon_states[demon.internal_name] == DEMON_STATES.BEATEN
 
 func process_battle_left() -> void:
-	if !has_pending_demons:
+	if !has_available_demons:
 		# TODO: Process game end
 		print("END OF GAME!!!!")
 		get_tree().quit()

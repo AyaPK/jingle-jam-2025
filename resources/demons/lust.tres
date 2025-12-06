@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="Demon" load_steps=6 format=3 uid="uid://cgdn105ouf4xy"]
 
-[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_4a0gm"]
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_342qf"]
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_wp25f"]
 [ext_resource type="Texture2D" uid="uid://lwxu1qmdih4i" path="res://assets/art/demons/lust/lust.png" id="1_xuqwj"]
@@ -13,8 +12,6 @@ full_image = ExtResource("1_xuqwj")
 headshot = ExtResource("2_dvtwb")
 internal_name = "Lust"
 demon_name = "Lustria"
-hp = 100
-seduction_target = 100
 entry_text = "Huh... kinda cute"
 beaten_text = "Oh... I like that"
 seduced_text = "Come over here and let me show you your prize"

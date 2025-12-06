@@ -8,8 +8,6 @@
 script = ExtResource("1_hqoho")
 internal_name = "Envy"
 demon_name = "Covillette"
-hp = null
-seduction_target = null
 entry_text = "Oh you think you're hot shit"
 beaten_text = "God damn, you were hot shit"
 seduced_text = "I hope I have you all to myself"
