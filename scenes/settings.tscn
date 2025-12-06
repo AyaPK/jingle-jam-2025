@@ -1,0 +1,153 @@
+[gd_scene load_steps=8 format=3 uid="uid://d20ds4nmqfk3e"]
+
+[ext_resource type="Script" uid="uid://rgrojkme5iw2" path="res://scripts/settings.gd" id="1_es4n0"]
+[ext_resource type="Texture2D" uid="uid://i1eothhql2pf" path="res://assets/art/hell.png" id="1_f4mfi"]
+[ext_resource type="Texture2D" uid="uid://chervc6xtbap8" path="res://assets/art/Border_filled_oranget.png" id="2_es4n0"]
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="3_gis3k"]
+[ext_resource type="Script" uid="uid://c5cdka3cki5rd" path="res://scripts/settings_main_menu_button.gd" id="4_83j8s"]
+[ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="4_gis3k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjs24"]
+texture = ExtResource("2_es4n0")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_es4n0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1221.0
+offset_bottom = 666.0
+texture = ExtResource("1_f4mfi")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 211.0
+offset_top = 185.0
+offset_right = 953.0
+offset_bottom = 414.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gjs24")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 37
+alignment = 1
+
+[node name="MusicVolume" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Buffer1" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+text = "             "
+
+[node name="MusicLabel" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gis3k")
+theme_override_font_sizes/font_size = 26
+text = "Music:"
+
+[node name="Buffer2" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+text = "       "
+
+[node name="MuteLabel" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gis3k")
+theme_override_font_sizes/font_size = 26
+text = "Mute"
+
+[node name="MuteCheckBox" type="CheckBox" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+
+[node name="Buffer3" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+text = "       "
+
+[node name="VolumeLabel" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gis3k")
+theme_override_font_sizes/font_size = 26
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Buffer4" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+text = "             "
+
+[node name="SfxVolume" type="HBoxContainer" parent="CanvasLayer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Buffer1" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+text = "             "
+
+[node name="SfxLabel" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gis3k")
+theme_override_font_sizes/font_size = 26
+text = "SFX:  "
+
+[node name="Buffer2" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+text = "       "
+
+[node name="MuteLabel" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gis3k")
+theme_override_font_sizes/font_size = 26
+text = "Mute"
+
+[node name="MuteCheckBox" type="CheckBox" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+
+[node name="Buffer3" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+text = "       "
+
+[node name="VolumeLabel" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gis3k")
+theme_override_font_sizes/font_size = 26
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Buffer4" type="Label" parent="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume"]
+layout_mode = 2
+text = "             "
+
+[node name="MainMenu" type="Button" parent="CanvasLayer"]
+custom_minimum_size = Vector2(400, 100)
+offset_left = 379.0
+offset_top = 488.0
+offset_right = 779.0
+offset_bottom = 588.0
+size_flags_horizontal = 3
+theme = ExtResource("3_gis3k")
+text = "Main Menu"
+script = ExtResource("4_83j8s")
+
+[connection signal="toggled" from="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume/MuteCheckBox" to="." method="_on_music_mute_check_box_toggled"]
+[connection signal="value_changed" from="CanvasLayer/PanelContainer/VBoxContainer/MusicVolume/VolumeSlider" to="." method="_on_music_volume_value_changed"]
+[connection signal="toggled" from="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume/MuteCheckBox" to="." method="_on_sfx_mute_check_box_toggled"]
+[connection signal="value_changed" from="CanvasLayer/PanelContainer/VBoxContainer/SfxVolume/VolumeSlider" to="." method="_on_sfx_volume_value_changed"]
+[connection signal="mouse_entered" from="CanvasLayer/MainMenu" to="CanvasLayer/MainMenu" method="_on_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/MainMenu" to="CanvasLayer/MainMenu" method="_on_pressed"]
