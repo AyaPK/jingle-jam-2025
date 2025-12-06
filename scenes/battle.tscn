@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://pf8o20wh7nof"]
+[gd_scene load_steps=17 format=3 uid="uid://beehljnlageaq"]
 
 [ext_resource type="Script" uid="uid://dx1heefco4bqt" path="res://scripts/battle.gd" id="1_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://35mqgxpe0kjo" path="res://assets/art/battle_background.png" id="2_v7i3o"]
@@ -11,7 +11,9 @@
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="8_v7i3o"]
 [ext_resource type="Script" path="res://scripts/battle_over_button.gd" id="8_yahae"]
 [ext_resource type="Script" uid="uid://2flwwihg4561" path="res://scripts/opponent_hp_display.gd" id="11_03edq"]
+[ext_resource type="Texture2D" uid="uid://dnv1t5jjajrnp" path="res://assets/art/ui/progress_transparent.png" id="11_6ni85"]
 [ext_resource type="Script" uid="uid://clrio0i25564" path="res://scripts/player_hp_display.gd" id="12_03edq"]
+[ext_resource type="Texture2D" uid="uid://c10p2s7q787qq" path="res://assets/art/ui/progress_red.png" id="12_vceff"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4pi3"]
 texture = ExtResource("6_4k1nj")
@@ -160,25 +162,24 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_6vh42")
 
 [node name="OpponentHP" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = 832.0
-offset_top = 12.0
-offset_right = 896.0
-offset_bottom = 76.0
-max_value = 1.0
-step = 0.05
-value = 1.0
-texture_progress = ExtResource("6_4k1nj")
+offset_left = 502.0
+offset_top = 9.0
+offset_right = 822.0
+offset_bottom = 25.0
+scale = Vector2(2, 2)
+texture_over = ExtResource("11_6ni85")
+texture_progress = ExtResource("12_vceff")
 script = ExtResource("11_03edq")
 
 [node name="PlayerHP" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 82.0
-offset_bottom = 74.0
-max_value = 1.0
-step = 0.05
-value = 1.0
-texture_progress = ExtResource("6_4k1nj")
+modulate = Color(0, 1, 0, 1)
+offset_left = 14.0
+offset_top = 603.0
+offset_right = 334.0
+offset_bottom = 667.0
+scale = Vector2(2, 2)
+texture_over = ExtResource("11_6ni85")
+texture_progress = ExtResource("12_vceff")
 script = ExtResource("12_03edq")
 
 [connection signal="mouse_entered" from="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" to="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" method="_on_mouse_entered"]

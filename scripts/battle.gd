@@ -19,6 +19,8 @@ var menu_state = MenuState.HOME;
 @onready var battle_over_container: CanvasLayer = $CanvasLayer/BattleOverMenu
 @onready var battle_over_lose_text: RichTextLabel = $CanvasLayer/BattleOverMenu/PanelContainer/YouLoseText
 @onready var battle_over_win_text: RichTextLabel = $CanvasLayer/BattleOverMenu/PanelContainer/YouWinText
+@onready var opponent_hp: TextureProgressBar = $CanvasLayer/OpponentHP
+@onready var player_hp: TextureProgressBar = $CanvasLayer/PlayerHP
 
 const BATTLE_ITEM_BUTTON = preload("res://scenes/battle_item_button.tscn")
 const DIALOG_BUTTON = preload("uid://gb850wcuo607")
@@ -30,6 +32,7 @@ func _ready() -> void:
 	
 	_load_item_buttons()
 	get_dialog_buttons()
+	update_ui()
 	
 	Signals.battle_turns_started.connect(_hide_menu)
 	Signals.battle_turns_finished.connect(show_main_buttons)
@@ -38,6 +41,7 @@ func _ready() -> void:
 	Signals.battle_player_lost.connect(set_player_lost)
 	Signals.battle_demon_beaten.connect(set_demon_beaten)
 	Signals.battle_demon_seduced.connect(set_demon_seduced)
+	Signals.damage_dealt.connect(update_ui)
 	
 	AudioManager.play_music("battle")
 
@@ -87,3 +91,7 @@ func set_demon_seduced() -> void:
 	battle_over_lose_text.hide()
 	battle_over_win_text.text = "You have seduced "+BattleManager.current_demon.demon_name+"!\n\nMaybe their companionship will prove useful..."
 	battle_over_win_text.show()
+
+func update_ui() -> void:
+	opponent_hp.value = BattleManager.demon_hp
+	player_hp.value = PlayerManager.hp
