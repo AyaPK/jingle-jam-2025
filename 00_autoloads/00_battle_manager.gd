@@ -163,7 +163,8 @@ func _pick_any_unique(pool: Array, existing: Array) -> Dialog:
 	return pool[0]
 
 func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
-	DialogPanel.push_text(dialog.dialog_text, demon)
+	var text: String = dialog.dialog_text if demon else "You: "+dialog.dialog_text
+	DialogPanel.push_text(text, demon)
 	demon_hp -= dialog.damage
 	demon_seduction += dialog.seduction
 	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
@@ -173,7 +174,7 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 
 func _random_partner_attacks() -> void:
 	for demon in GameStateManager.seduced_demons:
-		if randi() % 100 < 10:
+		if randi() % 100 < 100:
 			var demon_turn = _get_demon_turn(demon)
 			_attack_with_dialog(demon_turn, demon)
 			await Signals.dialog_finished
