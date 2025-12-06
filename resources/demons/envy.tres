@@ -5,8 +5,11 @@
 [resource]
 script = ExtResource("1_hqoho")
 demon_name = "Envy"
+hp = null
+seduction_target = null
 entry_text = "Oh you think you're hot shit"
 beaten_text = "God damn, you were hot shit"
 seduced_text = "I hope I have you all to myself"
 lose_text = "I wish I was more like you"
+battle_dialog = [null]
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

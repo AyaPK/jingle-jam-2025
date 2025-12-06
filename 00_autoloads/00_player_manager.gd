@@ -20,11 +20,11 @@ func _ready() -> void:
 	inventory.append(dagger)
 	
 	for i in range(1, 7):
-		var insult_dialog = load("res://resources/dialog/insult_" + str(i) + ".tres")
+		var insult_dialog = load("res://resources/dialog/player/insult_" + str(i) + ".tres")
 		insult_dialog_pool.append(insult_dialog)
 		
 	for i in range(1, 7):
-		var seduction_dialog = load("res://resources/dialog/seduction_" + str(i) + ".tres")
+		var seduction_dialog = load("res://resources/dialog/player/seduction_" + str(i) + ".tres")
 		seduction_dialog_pool.append(seduction_dialog)
 
 func reset_player_health() -> void:
