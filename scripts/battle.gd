@@ -6,7 +6,8 @@ enum MenuState {
 	ITEM,
 	FLIRT,
 	PARTNER,
-	HIDDEN
+	HIDDEN,
+	BATTLE_OVER
 }
 
 var menu_state = MenuState.HOME;
@@ -15,8 +16,11 @@ var menu_state = MenuState.HOME;
 @onready var fight: BattleMenuButton = $CanvasLayer/HomeMenu/HFlowContainer/Fight
 @onready var battle_item_container: HFlowContainer = $CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer
 @onready var battle_button_container: HFlowContainer = $CanvasLayer/FightMenu/BattleButtonContainer
+@onready var battle_over_container: CanvasLayer = $CanvasLayer/BattleOverMenu
+@onready var battle_over_lose_text: RichTextLabel = $CanvasLayer/BattleOverMenu/PanelContainer/YouLoseText
+@onready var battle_over_win_text: RichTextLabel = $CanvasLayer/BattleOverMenu/PanelContainer/YouWinText
 
-const BATTLE_ITEM_BUTTON = preload("uid://u5t8wd0vwpvu")
+const BATTLE_ITEM_BUTTON = preload("res://scenes/battle_item_button.tscn")
 const DIALOG_BUTTON = preload("uid://gb850wcuo607")
 
 func _ready() -> void:
@@ -30,6 +34,10 @@ func _ready() -> void:
 	Signals.battle_turns_started.connect(_hide_menu)
 	Signals.battle_turns_finished.connect(show_main_buttons)
 	Signals.battle_options_refreshed.connect(get_dialog_buttons)
+	Signals.battle_end.connect(battle_over)
+	Signals.battle_player_lost.connect(set_player_lost)
+	Signals.battle_demon_beaten.connect(set_demon_beaten)
+	Signals.battle_demon_seduced.connect(set_demon_seduced)
 
 func show_main_buttons() -> void:
 	fight.grab_focus()
@@ -60,3 +68,20 @@ func get_dialog_buttons() -> void:
 		battle_button_container.move_child(dialog_button, 0)
 		dialog_button.set_up_details()
 	pass
+
+func battle_over() -> void:
+	Signals.menu_state_changed.emit(menu_state, MenuState.BATTLE_OVER)
+
+func set_player_lost() -> void:
+	battle_over_win_text.hide()
+	battle_over_lose_text.show()
+
+func set_demon_beaten() -> void:
+	battle_over_lose_text.hide()
+	battle_over_win_text.text = "You have vanquished "+BattleManager.current_demon.demon_name+"!\n\nYou have learned valuable lessons here that may help you in future battles..."
+	battle_over_win_text.show()
+
+func set_demon_seduced() -> void:
+	battle_over_lose_text.hide()
+	battle_over_win_text.text = "You have seduced "+BattleManager.current_demon.demon_name+"!\n\nMaybe their companionship will prove useful..."
+	battle_over_win_text.show()

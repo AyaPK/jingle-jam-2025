@@ -12,6 +12,9 @@ var _is_revealing: bool = false
 @onready var demon_face: Sprite2D = $CanvasLayer/DemonFace
 @onready var texture_rect: PanelContainer = $CanvasLayer/TextureRect
 
+var dialog_visible:
+	get: return canvas_layer.visible
+
 func _ready() -> void:
 	label.text = ""
 	canvas_layer.hide()

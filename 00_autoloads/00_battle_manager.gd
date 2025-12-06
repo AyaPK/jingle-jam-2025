@@ -80,6 +80,9 @@ func _demon_seduced() -> void:
 	Signals.battle_demon_seduced.emit()
 
 func _end_battle() -> void:
+	if DialogPanel.dialog_visible:
+		await Signals.dialog_finished
+	Signals.battle_end.emit()
 	battle_state = STATES.BATTLE_OVER
 
 func leave_battle() -> void:
