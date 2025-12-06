@@ -27,20 +27,17 @@ func initiate_fight() -> void:
 
 func execute_turn() -> void:
 	battle_state = STATES.EXECUTING_TURNS
-	var demon_turn = _get_demon_turn()
+	var demon_turn = _get_demon_turn(current_demon)
 	
 	# Player turn
 	if player_turn is Item:
 		player_turn.effect.trigger()
 	elif player_turn is Dialog:
-		DialogPanel.push_text("You: "+player_turn.dialog_text)
-		demon_hp -= player_turn.damage
-		demon_seduction += player_turn.seduction
-		if player_turn.type == Dialog.DIALOG_TYPE.ATTACK:
-			AudioManager.play_sfx("hit")
-		else:
-			AudioManager.play_sfx("seduce")
+		_attack_with_dialog(player_turn)
 	await Signals.dialog_finished
+	
+	# Partner interjection
+	_random_partner_attacks()
 	
 	# Battle end checks?
 	if demon_hp <= 0:
@@ -161,6 +158,22 @@ func _pick_any_unique(pool: Array, existing: Array) -> Dialog:
 	# If pool is too small, return ANY dialog (shows a warning condition)
 	return pool[0]
 
-func _get_demon_turn() -> Dialog:
+func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
+	DialogPanel.push_text(dialog.dialog_text, demon)
+	demon_hp -= dialog.damage
+	demon_seduction += dialog.seduction
+	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
+		AudioManager.play_sfx("hit")
+	else:
+		AudioManager.play_sfx("seduce")
+
+func _random_partner_attacks() -> void:
+	for demon in GameStateManager.seduced_demons:
+		if randi() % 100 < 10:
+			var demon_turn = _get_demon_turn(demon)
+			_attack_with_dialog(demon_turn, demon)
+			await Signals.dialog_finished
+
+func _get_demon_turn(demon: Demon) -> Dialog:
 	# TODO: More complicated logic here?
-	return current_demon.battle_dialog.pick_random()
+	return demon.battle_dialog.pick_random()
