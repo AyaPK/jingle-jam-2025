@@ -6,6 +6,7 @@
 script = ExtResource("1_dhryi")
 name = "Ask nicely"
 dialog_text = "Relax... I’m not here to break you. Not unless you ask nicely."
+type = 1
 damage = 5
 seduction = 15
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

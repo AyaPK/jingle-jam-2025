@@ -35,6 +35,10 @@ func execute_turn() -> void:
 			DialogPanel.push_text(turn.dialog_text)
 			demon_hp -= turn.damage
 			demon_seduction += turn.seduction
+			if turn.type == Dialog.DIALOG_TYPE.ATTACK:
+				AudioManager.play_sfx("hit")
+			else:
+				AudioManager.play_sfx("seduce")
 		await Signals.dialog_finished
 		turn_queue.pop_at(0)
 		# hp/seduction checks in to battleover state

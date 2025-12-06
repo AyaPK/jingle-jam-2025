@@ -8,7 +8,7 @@ enum MenuState {
 	PARTNER,
 	HIDDEN
 }
-
+\
 var menu_state = MenuState.HOME;
 
 @onready var main_buttons_container: CanvasLayer = $CanvasLayer/HomeMenu

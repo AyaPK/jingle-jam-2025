@@ -6,10 +6,16 @@ enum DIALOG_RARITY {
 	ULTRA_RARE,
 }
 
+enum DIALOG_TYPE {
+	ATTACK,
+	SEDUCE
+}
+
 @export_category("Config")
 @export_multiline var name: String
 @export_multiline var dialog_text: String
 @export var rarity: DIALOG_RARITY
+@export var type: DIALOG_TYPE = DIALOG_TYPE.ATTACK
 
 @export_category("Stats")
 @export var damage: int
