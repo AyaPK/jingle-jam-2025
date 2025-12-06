@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://dkt8xv8ckbg2k"]
+
+[ext_resource type="Texture2D" uid="uid://bklrdc801bhwb" path="res://assets/art/items/dagger.png" id="1_25keo"]
+[ext_resource type="Script" uid="uid://cmolbrjjfb1oo" path="res://resources/items/dagger.gd" id="1_fgw4y"]
+[ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/items/item.gd" id="1_mkiuy"]
+
+[sub_resource type="Resource" id="Resource_luexb"]
+script = ExtResource("1_fgw4y")
+metadata/_custom_type_script = "uid://cmolbrjjfb1oo"
+
+[resource]
+script = ExtResource("1_mkiuy")
+item_name = "Dagger"
+image = ExtResource("1_25keo")
+effect = SubResource("Resource_luexb")
+metadata/_custom_type_script = "uid://bladufjcc5r0s"

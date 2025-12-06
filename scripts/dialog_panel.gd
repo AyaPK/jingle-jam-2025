@@ -33,8 +33,6 @@ func _show_next_from_queue() -> void:
 		return
 	
 	var demon: Demon = text_queue[0][1]
-	print(demon)
-	print(text_queue[0])
 	current_text = text_queue.pop_front()[0]
 	var sb = texture_rect.get("theme_override_styles/panel")
 	sb = sb.duplicate()

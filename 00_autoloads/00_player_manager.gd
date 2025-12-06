@@ -14,8 +14,10 @@ func _ready() -> void:
 	
 	var chocolate: Item = preload("res://resources/items/chocolate.tres")
 	var flowers: Item = preload("res://resources/items/flowers.tres")
+	var dagger: Item = preload("res://resources/items/dagger.tres")
 	inventory.append(chocolate)
 	inventory.append(flowers)
+	inventory.append(dagger)
 	
 	for i in range(1, 7):
 		var insult_dialog = load("res://resources/dialog/insult_" + str(i) + ".tres")
