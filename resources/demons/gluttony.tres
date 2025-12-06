@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=2 format=3 uid="uid://npmijm0pstk6"]
+[gd_resource type="Resource" script_class="Demon" load_steps=4 format=3 uid="uid://npmijm0pstk6"]
 
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_57ivw"]
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_umu0c"]
+[ext_resource type="Resource" uid="uid://ch38h1laluccd" path="res://resources/dialog/gluttony/gluttony_dialog_1.tres" id="2_tlq3d"]
 
 [resource]
 script = ExtResource("1_umu0c")
@@ -11,4 +13,5 @@ entry_text = "This isn't my ship"
 beaten_text = "Eugh I need a drink"
 seduced_text = "You can be the captain tonight"
 lose_text = "Give it all to me"
+battle_dialog = Array[ExtResource("1_57ivw")]([ExtResource("2_tlq3d")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

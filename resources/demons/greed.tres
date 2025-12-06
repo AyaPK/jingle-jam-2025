@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=2 format=3 uid="uid://blh4fsdmtksoy"]
+[gd_resource type="Resource" script_class="Demon" load_steps=4 format=3 uid="uid://blh4fsdmtksoy"]
 
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_dqre4"]
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_ops65"]
+[ext_resource type="Resource" uid="uid://y5vlqieebl3g" path="res://resources/dialog/greed/greed_dialog_1.tres" id="2_exo4a"]
 
 [resource]
 script = ExtResource("1_dqre4")
@@ -9,4 +11,5 @@ entry_text = "Gimme yah money"
 beaten_text = "Fine I give up you can have one of my possesions :("
 seduced_text = "Give it to me"
 lose_text = "You owe me £50"
+battle_dialog = Array[ExtResource("1_ops65")]([ExtResource("2_exo4a")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://ch38h1laluccd"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_lgktr"]
+
+[resource]
+script = ExtResource("1_lgktr")
+name = "I've had tastier"
+dialog_text = "Sweet thing, you’re looking like a snack… though honestly, I’ve had richer, tastier, and far more satisfying prey"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

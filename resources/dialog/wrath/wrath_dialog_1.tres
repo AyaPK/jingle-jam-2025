@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://d4ahgk2tu4nau"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_5pcuy"]
+
+[resource]
+script = ExtResource("1_5pcuy")
+name = "I'll break your confidence"
+dialog_text = "You really showed up to fight me with that? Cute. I’ll break your confidence first... Your bones can wait"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

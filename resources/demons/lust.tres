@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=4 format=3 uid="uid://cgdn105ouf4xy"]
+[gd_resource type="Resource" script_class="Demon" load_steps=6 format=3 uid="uid://cgdn105ouf4xy"]
 
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_342qf"]
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_wp25f"]
 [ext_resource type="Texture2D" uid="uid://lwxu1qmdih4i" path="res://assets/art/demons/lust/lust.png" id="1_xuqwj"]
+[ext_resource type="Resource" uid="uid://dubkmja4j1o4v" path="res://resources/dialog/lust/lust_dialog_1.tres" id="2_82ws0"]
 [ext_resource type="Texture2D" uid="uid://mtrj47odsqyb" path="res://assets/art/demons/lust/lust_headshot.png" id="2_dvtwb"]
 
 [resource]
@@ -15,4 +17,5 @@ entry_text = "Huh... kinda cute"
 beaten_text = "Oh... I like that"
 seduced_text = "Come over here and let me show you your prize"
 lose_text = "That ain't hot"
+battle_dialog = Array[ExtResource("1_wp25f")]([ExtResource("2_82ws0")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"
