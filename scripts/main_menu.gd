@@ -7,6 +7,8 @@ func _ready() -> void:
 	
 	if !GameStateManager.has_any_partners:
 		partners_button.hide()
+	
+	AudioManager.play_music("menu")
 
 func _process(_delta: float) -> void:
 	pass

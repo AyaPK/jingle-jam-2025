@@ -38,6 +38,8 @@ func _ready() -> void:
 	Signals.battle_player_lost.connect(set_player_lost)
 	Signals.battle_demon_beaten.connect(set_demon_beaten)
 	Signals.battle_demon_seduced.connect(set_demon_seduced)
+	
+	AudioManager.play_music("battle")
 
 func show_main_buttons() -> void:
 	fight.grab_focus()
