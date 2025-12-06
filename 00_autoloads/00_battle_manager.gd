@@ -50,7 +50,8 @@ func execute_turn() -> void:
 		_demon_seduced()
 		return
 	
-	await Signals.demon_turns_finished
+	if GameStateManager.has_any_partners:
+		await Signals.demon_turns_finished
 	# Demon turn
 	DialogPanel.push_text(demon_turn.dialog_text, current_demon)
 	PlayerManager.hp -= demon_turn.damage

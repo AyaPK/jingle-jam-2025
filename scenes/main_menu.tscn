@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bfhslpx3f8pml"]
+[gd_scene load_steps=15 format=3 uid="uid://bfhslpx3f8pml"]
 
 [ext_resource type="Script" uid="uid://p76dtda487i8" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="PackedScene" uid="uid://8jvy4ghanp55" path="res://scenes/demon_button.tscn" id="2_ekxnf"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://kqplkbwouifd" path="res://resources/demons/pride.tres" id="9_1ajci"]
 [ext_resource type="Resource" uid="uid://vor6hqiyihqc" path="res://resources/demons/sloth.tres" id="10_7b55j"]
 [ext_resource type="Script" path="res://scripts/main_menu_settings.gd" id="12_rcqid"]
+[ext_resource type="Texture2D" uid="uid://b1qjlknylccro" path="res://assets/art/logo.png" id="14_1ajci"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_l6cm7")
@@ -25,10 +26,17 @@ offset_bottom = 666.0
 texture = ExtResource("2_flqon")
 
 [node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer"]
-offset_left = 132.0
-offset_top = 239.0
-offset_right = 1108.0
-offset_bottom = 423.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -488.0
+offset_top = 20.0
+offset_right = 488.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
 [node name="WrathButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
@@ -70,10 +78,16 @@ theme_override_font_sizes/font_size = 39
 demon = ExtResource("10_7b55j")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_left = 212.0
-offset_top = 466.0
-offset_right = 1011.0
-offset_bottom = 546.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -80.0
+offset_right = 400.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 6
 size_flags_vertical = 3
 alignment = 1
@@ -103,16 +117,34 @@ text = "Settings"
 script = ExtResource("12_rcqid")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = 169.0
-offset_top = 58.0
-offset_right = 1058.0
-offset_bottom = 182.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -281.375
+offset_top = -62.0
+offset_right = 281.375
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("4_wu84c")
-theme_override_font_sizes/normal_font_size = 120
+theme_override_font_sizes/normal_font_size = 80
 bbcode_enabled = true
-text = " [color=red][shake]Damned if you don't!!!![/shake][/color]"
+text = " Choose an opponent"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(617, 117)
+scale = Vector2(5.4555926, 5.455592)
+texture = ExtResource("14_1ajci")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer/Sprite2D"]
+self_modulate = Color(0, 0, 0, 0.8352941)
+show_behind_parent = true
+position = Vector2(1.4663773, 2.1995773)
+texture = ExtResource("14_1ajci")
 
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/SettingsButton" to="CanvasLayer/HBoxContainer/SettingsButton" method="_on_pressed"]
