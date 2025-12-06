@@ -4,7 +4,8 @@ extends Node
 @export var sfx_bus_name: String = "SFX"
 
 var music_library: Dictionary = {
-	# "main_menu": preload("res://assets/audio/music/main_menu.ogg"),
+	"menu": preload("res://assets/music/menu1.ogg"),
+	"battle": preload("res://assets/music/battle1.ogg")
 }
 
 var sfx_library: Dictionary = {
