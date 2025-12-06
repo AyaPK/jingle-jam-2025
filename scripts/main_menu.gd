@@ -27,3 +27,6 @@ func random_string(length: int = 10) -> String:
 	for i in length:
 		result += chars[rng.randi_range(0, chars.length() - 1)]
 	return result
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/Skills.tscn")

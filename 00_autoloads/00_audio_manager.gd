@@ -30,7 +30,6 @@ func _ready() -> void:
 	add_child(_music_player)
 
 func play_music(music: String) -> void:
-	print("Playing")
 	var stream: AudioStream = music_library.get(music)
 	if stream == null:
 		push_warning("AudioManager: music '" + music + "' not found in music_library")

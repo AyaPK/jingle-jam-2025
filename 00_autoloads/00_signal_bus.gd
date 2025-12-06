@@ -18,4 +18,5 @@ signal battle_left
 signal battle_end
 signal battle_options_refreshed
 signal damage_dealt
+signal demon_turns_finished
 #endregion

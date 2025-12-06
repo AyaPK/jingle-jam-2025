@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=3 uid="uid://dn8xv4um3j7f2"]
+
+[ext_resource type="Texture2D" uid="uid://c6dn57wx8f577" path="res://assets/art/Border_filled_red.png" id="1_11ggv"]
+[ext_resource type="Script" uid="uid://c4te7uxxufjxo" path="res://scripts/skills.gd" id="1_46wke"]
+[ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="2_6bbfm"]
+[ext_resource type="Texture2D" uid="uid://i1eothhql2pf" path="res://assets/art/hell.png" id="2_f61yr"]
+[ext_resource type="PackedScene" uid="uid://c47btjjyvj32h" path="res://scenes/skill_menu_button.tscn" id="5_j8gul"]
+[ext_resource type="PackedScene" uid="uid://c2r1y5pt7agec" path="res://scenes/skillmenulabel.tscn" id="5_mo201"]
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="6_mo201"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_11ggv"]
+texture = ExtResource("1_11ggv")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="SkillsMenu" type="Node2D"]
+script = ExtResource("1_46wke")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1221.0
+offset_bottom = 666.0
+texture = ExtResource("2_f61yr")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -354.0
+offset_top = -220.0
+offset_right = 354.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_11ggv")
+
+[node name="SkillLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -49.0
+offset_top = 120.0
+offset_right = 49.0
+offset_bottom = 168.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_6bbfm")
+theme_override_font_sizes/font_size = 80
+text = "Skills"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+offset_left = 238.0
+offset_top = 192.0
+offset_right = 914.0
+offset_bottom = 528.0
+
+[node name="SkillContainer" type="VBoxContainer" parent="CanvasLayer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Insults" parent="CanvasLayer/ScrollContainer/SkillContainer" instance=ExtResource("5_mo201")]
+layout_mode = 2
+
+[node name="SkillMenuButton" parent="CanvasLayer/ScrollContainer/SkillContainer" instance=ExtResource("5_j8gul")]
+layout_mode = 2
+text = "Skill name :)"
+
+[node name="Back" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.5
+offset_top = -101.0
+offset_right = 91.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_mo201")
+theme_override_font_sizes/font_size = 60
+text = "Back"
+
+[connection signal="focus_entered" from="CanvasLayer/Back" to="." method="_on_back_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/Back" to="." method="_on_back_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/Back" to="." method="_on_back_pressed"]

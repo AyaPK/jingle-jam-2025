@@ -50,6 +50,7 @@ func execute_turn() -> void:
 		_demon_seduced()
 		return
 	
+	await Signals.demon_turns_finished
 	# Demon turn
 	DialogPanel.push_text(demon_turn.dialog_text, current_demon)
 	PlayerManager.hp -= demon_turn.damage
@@ -182,7 +183,7 @@ func _random_partner_attacks() -> void:
 			Signals.damage_dealt.emit()
 			await Signals.dialog_finished
 			Signals.battle_single_turn.emit()
-			
+	Signals.demon_turns_finished.emit()
 
 func _get_demon_turn(demon: Demon) -> Dialog:
 	# TODO: More complicated logic here?
