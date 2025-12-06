@@ -14,4 +14,5 @@ signal battle_player_lost
 signal battle_demon_beaten
 signal battle_demon_seduced
 signal battle_left
+signal battle_options_refreshed
 #endregion

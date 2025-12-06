@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://beehljnlageaq"]
+[gd_scene load_steps=10 format=3 uid="uid://beehljnlageaq"]
 
 [ext_resource type="Script" uid="uid://dx1heefco4bqt" path="res://scripts/battle.gd" id="1_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://35mqgxpe0kjo" path="res://assets/art/battle_background.png" id="2_v7i3o"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="3_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://chervc6xtbap8" path="res://assets/art/Border_filled_oranget.png" id="6_4k1nj"]
 [ext_resource type="Texture2D" uid="uid://bq4i7pv04pr5l" path="res://assets/art/demons/wrath/full.png" id="6_6vh42"]
+[ext_resource type="PackedScene" uid="uid://gb850wcuo607" path="res://scenes/dialog_button.tscn" id="7_f4pi3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4pi3"]
 texture = ExtResource("6_4k1nj")
@@ -51,15 +52,18 @@ script = ExtResource("3_a12nh")
 [node name="FightMenu" type="CanvasLayer" parent="CanvasLayer" node_paths=PackedStringArray("first_button")]
 script = ExtResource("3_lpir7")
 show_in_menu_state = 1
-first_button = NodePath("HFlowContainer/Back")
+first_button = NodePath("BattleButtonContainer/Back")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer/FightMenu"]
+[node name="BattleButtonContainer" type="HFlowContainer" parent="CanvasLayer/FightMenu"]
 offset_left = 196.0
 offset_top = 166.0
 offset_right = 1006.0
 offset_bottom = 370.0
 
-[node name="Back" type="Button" parent="CanvasLayer/FightMenu/HFlowContainer"]
+[node name="DialogButton" parent="CanvasLayer/FightMenu/BattleButtonContainer" instance=ExtResource("7_f4pi3")]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="CanvasLayer/FightMenu/BattleButtonContainer"]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -68,6 +72,7 @@ text = "Back"
 script = ExtResource("3_a12nh")
 
 [node name="HomeMenu" type="CanvasLayer" parent="CanvasLayer" node_paths=PackedStringArray("first_button")]
+visible = false
 script = ExtResource("3_lpir7")
 first_button = NodePath("HFlowContainer/Fight")
 
@@ -96,13 +101,14 @@ script = ExtResource("3_a12nh")
 next_menu = 2
 
 [node name="Opponent" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(849, 278)
+position = Vector2(842, 222)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_6vh42")
 
 [connection signal="mouse_entered" from="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" to="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" to="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" method="_on_pressed"]
-[connection signal="mouse_entered" from="CanvasLayer/FightMenu/HFlowContainer/Back" to="CanvasLayer/FightMenu/HFlowContainer/Back" method="_on_mouse_entered"]
-[connection signal="pressed" from="CanvasLayer/FightMenu/HFlowContainer/Back" to="CanvasLayer/FightMenu/HFlowContainer/Back" method="_on_pressed"]
+[connection signal="mouse_entered" from="CanvasLayer/FightMenu/BattleButtonContainer/Back" to="CanvasLayer/FightMenu/BattleButtonContainer/Back" method="_on_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/FightMenu/BattleButtonContainer/Back" to="CanvasLayer/FightMenu/BattleButtonContainer/Back" method="_on_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/HomeMenu/HFlowContainer/Fight" to="CanvasLayer/HomeMenu/HFlowContainer/Fight" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/HomeMenu/HFlowContainer/Fight" to="CanvasLayer/HomeMenu/HFlowContainer/Fight" method="_on_pressed"]
 [connection signal="mouse_entered" from="CanvasLayer/HomeMenu/HFlowContainer/Item" to="CanvasLayer/HomeMenu/HFlowContainer/Item" method="_on_mouse_entered"]

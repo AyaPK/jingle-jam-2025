@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bf6eh1pdgro2m"]
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dvo4qmp8j6no5"]
 
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_5ncje"]
 

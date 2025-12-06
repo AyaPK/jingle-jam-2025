@@ -17,6 +17,7 @@ func _ready() -> void:
 	canvas_layer.hide()
 
 func push_text(text: String, demon: Demon = null) -> void:
+	text = text.replace("’", '\'')
 	text_queue.append([text, demon])
 	if not canvas_layer.visible:
 		Signals.dialog_started.emit()

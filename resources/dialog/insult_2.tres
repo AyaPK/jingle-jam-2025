@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://c5bk4xkhoki4g"]
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dsftetcwovf5o"]
 
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_67jfc"]
 
 [resource]
 script = ExtResource("1_67jfc")
-name = "You’re trembling"
+name = "You're trembling"
 dialog_text = "All that menace, and yet you’re the one trembling the moment I talk back."
 rarity = 1
 damage = 25

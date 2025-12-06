@@ -32,6 +32,8 @@ offset_left = 243.0
 offset_top = 476.0
 offset_right = 1043.0
 offset_bottom = 606.0
+mouse_filter = 2
+mouse_behavior_recursive = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_ainys")
 
 [node name="Label" type="RichTextLabel" parent="CanvasLayer/TextureRect"]

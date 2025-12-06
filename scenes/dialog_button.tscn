@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://gb850wcuo607"]
+
+[ext_resource type="Script" uid="uid://edb0vxultbg1" path="res://scripts/dialog_button.gd" id="1_drp0p"]
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="1_lxihb"]
+
+[node name="DialogButton" type="Button"]
+custom_minimum_size = Vector2(400, 100)
+theme = ExtResource("1_lxihb")
+text = "Dialog Name"
+script = ExtResource("1_drp0p")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

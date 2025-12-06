@@ -31,6 +31,10 @@ func execute_turn() -> void:
 	for turn in turn_queue:
 		if turn is Item:
 			turn.effect.trigger()
+		elif turn is Dialog:
+			DialogPanel.push_text(turn.dialog_text)
+			demon_hp -= turn.damage
+			demon_seduction += turn.seduction
 		await Signals.dialog_finished
 		turn_queue.pop_at(0)
 		# hp/seduction checks in to battleover state
@@ -54,6 +58,7 @@ func execute_turn() -> void:
 func _finish_turn() -> void:
 	battle_state = STATES.AWAITING_TURN_CHOICE
 	Signals.battle_turns_finished.emit()
+	Signals.battle_options_refreshed.emit()
 
 func _set_up_demon() -> void:
 	demon_hp = current_demon.hp
@@ -65,7 +70,7 @@ func _player_lost() -> void:
 	Signals.battle_player_lost.emit()
 
 func _demon_beaten() -> void:
-	# TODO: Demon beaten text
+	DialogPanel.push_text(current_demon.beaten_text, current_demon)
 	await Signals.dialog_finished
 	Signals.battle_demon_beaten.emit()
 
@@ -81,3 +86,67 @@ func leave_battle() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	Signals.battle_left.emit()
 	battle_state = STATES.NOT_IN_BATTLE
+
+func get_dialog_options() -> Array:
+	var results: Array = []
+
+	# Pools
+	var insult_pool = PlayerManager.insult_dialog_pool
+	var seduction_pool = PlayerManager.seduction_dialog_pool
+
+	# Seduction influence (0–1)
+	var base_seduction := float(demon_seduction) / float(max(demon_hp, 1))
+
+	# Ensure seduction is ALWAYS at least 10% likely
+	var seduction_weight: float = clamp(base_seduction, 0.1, 1.0)
+
+	for i in range(4):
+		var selected_dialog = null
+		var pool
+		for attempt in range(10):  # try multiple times to find a unique one
+			var choose_seduction: bool = randf() < seduction_weight
+			pool = seduction_pool if choose_seduction else insult_pool
+			if pool.is_empty():
+				pool = insult_pool if choose_seduction else seduction_pool
+
+			var candidate = _choose_weighted_dialog(pool)
+
+			if candidate not in results:
+				selected_dialog = candidate
+				break
+		
+		# If after 10 tries it's still not unique, force a fallback unique pick
+		if selected_dialog == null:
+			selected_dialog = _pick_any_unique(pool, results)
+
+		results.append(selected_dialog)
+
+	return results
+
+
+func _choose_weighted_dialog(pool: Array) -> Dialog:
+	var weighted: Array = []
+
+	for dialog in pool:
+		var weight := 1
+
+		match dialog.rarity:
+			dialog.DIALOG_RARITY.COMMON:
+				weight = 7
+			dialog.DIALOG_RARITY.RARE:
+				weight = 2
+			dialog.DIALOG_RARITY.ULTRA_RARE:
+				weight = 1
+
+		# Duplicate the dialog "weight" times
+		for i in range(weight):
+			weighted.append(dialog)
+
+	return weighted[randi() % weighted.size()]
+
+func _pick_any_unique(pool: Array, existing: Array) -> Dialog:
+	for dialog in pool:
+		if dialog not in existing:
+			return dialog
+	# If pool is too small, return ANY dialog (shows a warning condition)
+	return pool[0]

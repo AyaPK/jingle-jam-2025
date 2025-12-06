@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_radns")
-name = "You’re shaking"
+name = "You're shaking"
 dialog_text = "If you’re trying to resist me, you’ll have to do it without shaking."
 rarity = 2
 seduction = 40

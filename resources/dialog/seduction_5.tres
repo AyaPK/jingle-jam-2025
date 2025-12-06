@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_l3nqh")
-name = "Don’t look away"
+name = "Don't look away"
 dialog_text = "Don’t look away. I want to see the exact second you slip."
 rarity = 1
 damage = 10
