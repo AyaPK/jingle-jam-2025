@@ -102,18 +102,18 @@ func leave_battle() -> void:
 	Signals.battle_left.emit()
 	battle_state = STATES.NOT_IN_BATTLE
 
-func get_dialog_options() -> Array:
-	var results: Array = []
+func get_dialog_options() -> Array[Dialog]:
+	var results: Array[Dialog] = []
 
 	# Pools
 	var insult_pool = PlayerManager.insult_dialog_pool
 	var seduction_pool = PlayerManager.seduction_dialog_pool
 
 	# Seduction influence (0–1)
-	var base_seduction := float(demon_seduction) / float(max(demon_hp, 1))
+	var base_seduction := float(demon_seduction) / float(current_demon.seduction_target)
 
-	# Ensure seduction is ALWAYS at least 10% likely
-	var seduction_weight: float = clamp(base_seduction, 0.05, 0.9)
+	# Ensure seduction is ALWAYS at least 15% likely
+	var seduction_weight: float = clamp(base_seduction, 0.15, 0.7)
 
 	for i in range(4):
 		var selected_dialog = null
