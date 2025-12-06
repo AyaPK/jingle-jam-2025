@@ -21,7 +21,7 @@ func _ready() -> void:
 func initiate_fight() -> void:
 	_set_up_demon()
 	battle_state = STATES.AWAITING_TURN_CHOICE
-	DialogPanel.push_text(current_demon.entry_text)
+	DialogPanel.push_text(current_demon.entry_text, current_demon)
 	await Signals.dialog_finished
 	Signals.battle_turns_finished.emit()
 
@@ -32,7 +32,7 @@ func execute_turn() -> void:
 		if turn is Item:
 			turn.effect.trigger()
 		elif turn is Dialog:
-			DialogPanel.push_text(turn.dialog_text)
+			DialogPanel.push_text("You: "+turn.dialog_text)
 			demon_hp -= turn.damage
 			demon_seduction += turn.seduction
 			if turn.type == Dialog.DIALOG_TYPE.ATTACK:
@@ -102,7 +102,7 @@ func get_dialog_options() -> Array:
 	var base_seduction := float(demon_seduction) / float(max(demon_hp, 1))
 
 	# Ensure seduction is ALWAYS at least 10% likely
-	var seduction_weight: float = clamp(base_seduction, 0.1, 1.0)
+	var seduction_weight: float = clamp(base_seduction, 0.05, 0.9)
 
 	for i in range(4):
 		var selected_dialog = null

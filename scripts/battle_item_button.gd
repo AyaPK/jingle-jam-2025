@@ -12,7 +12,9 @@ func load_item_details() -> void:
 
 func _on_mouse_entered() -> void:
 	grab_focus()
+	AudioManager.play_sfx("hover_button")
 
 func _on_pressed() -> void:
 	BattleManager.turn_queue.append(item_resource)
 	Signals.battle_turns_started.emit()
+	AudioManager.play_sfx("give_gift")

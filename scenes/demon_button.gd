@@ -11,7 +11,8 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	BattleManager.current_demon = demon
 	get_tree().change_scene_to_file("res://scenes/battle.tscn")
-
-
+	AudioManager.play_sfx("press_button")
+	
 func _on_mouse_entered() -> void:
 	grab_focus()
+	AudioManager.play_sfx("hover_button")

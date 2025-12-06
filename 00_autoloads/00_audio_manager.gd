@@ -9,7 +9,11 @@ var music_library: Dictionary = {
 
 var sfx_library: Dictionary = {
 	"seduce": preload("res://assets/sfx/seduce.wav"),
-	"hit": preload("res://assets/sfx/impact.wav")
+	"hit": preload("res://assets/sfx/impact.wav"),
+	"hover_button": preload("res://assets/sfx/hover.wav"),
+	"back_button": preload("res://assets/sfx/back.wav"),
+	"press_button": preload("res://assets/sfx/press.wav"),
+	"give_gift": preload("res://assets/sfx/gift.wav")
 }
 
 var _music_player: AudioStreamPlayer
