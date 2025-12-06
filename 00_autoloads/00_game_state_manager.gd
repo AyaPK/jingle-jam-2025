@@ -29,11 +29,11 @@ func _ready() -> void:
 
 func beat_demon() -> void:
 	var demon = BattleManager.current_demon
-	demon_states[demon.demon_name] = DEMON_STATES.BEATEN
+	demon_states[demon.internal_name] = DEMON_STATES.BEATEN
 
 func seduce_demon() -> void:
 	var demon = BattleManager.current_demon
-	demon_states[demon.demon_name] = DEMON_STATES.SEDUCED
+	demon_states[demon.internal_name] = DEMON_STATES.SEDUCED
 
 func demon_is_seduced(demon_name) -> bool:
 	return demon_states[demon_name] == DEMON_STATES.SEDUCED

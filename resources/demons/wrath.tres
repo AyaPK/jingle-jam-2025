@@ -10,6 +10,7 @@
 script = ExtResource("1_jqpd5")
 full_image = ExtResource("1_owop7")
 headshot = ExtResource("1_a37yd")
+internal_name = "Wrath"
 demon_name = "Furia"
 entry_text = "Let's dance"
 beaten_text = "You'll pay for this"

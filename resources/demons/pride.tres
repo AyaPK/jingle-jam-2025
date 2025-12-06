@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_do7o1")
+internal_name = "Pride"
 demon_name = "Vanegoris"
 entry_text = "Tell me I'm the greatest"
 beaten_text = "My body is injured, my pride remains intact"

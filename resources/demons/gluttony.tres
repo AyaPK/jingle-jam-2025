@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_umu0c")
+internal_name = "Gluttony"
 demon_name = "Solmera"
 hp = 100
 seduction_target = 100

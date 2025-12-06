@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_hqoho")
+internal_name = "Envy"
 demon_name = "Covillette"
 hp = null
 seduction_target = null

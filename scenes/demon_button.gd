@@ -7,7 +7,7 @@ func _ready() -> void:
 	if demon:
 		text = " "+demon.demon_name
 		demon_headshot.texture = demon.headshot
-		if GameStateManager.demon_is_beaten(demon.demon_name) or GameStateManager.demon_is_seduced(demon.demon_name):
+		if GameStateManager.demon_is_beaten(demon.internal_name) or GameStateManager.demon_is_seduced(demon.internal_name):
 			disabled = true
 			demon_headshot.self_modulate = Color()
 

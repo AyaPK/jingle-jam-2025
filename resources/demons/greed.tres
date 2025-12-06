@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_dqre4")
+internal_name = "Greed"
 demon_name = "Avarous"
 entry_text = "Gimme yah money"
 beaten_text = "Fine I give up you can have one of my possesions :("

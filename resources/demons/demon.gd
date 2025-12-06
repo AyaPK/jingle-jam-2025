@@ -5,6 +5,7 @@ class_name Demon extends Resource
 @export var headshot: Texture2D
 
 @export_category("Stats")
+@export var internal_name: String
 @export var demon_name: String
 @export var hp: int = 100
 @export var seduction_target: int = 100
