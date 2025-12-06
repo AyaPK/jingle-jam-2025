@@ -14,3 +14,5 @@ class_name Demon extends Resource
 @export_multiline var beaten_text: String
 @export_multiline var seduced_text: String
 @export_multiline var lose_text: String
+
+@export var battle_dialog: Array[Dialog]
