@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://bfhslpx3f8pml"]
 
 [ext_resource type="Script" uid="uid://p76dtda487i8" path="res://scripts/main_menu.gd" id="1_l6cm7"]
-[ext_resource type="Texture2D" uid="uid://dxw33gvq1ji3b" path="res://assets/art/hell.webp" id="2_8ln24"]
 [ext_resource type="PackedScene" uid="uid://8jvy4ghanp55" path="res://scenes/demon_button.tscn" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://i1eothhql2pf" path="res://assets/art/hell.png" id="2_flqon"]
 [ext_resource type="PackedScene" uid="uid://bnjgrcycgkw7" path="res://scenes/menu_button.tscn" id="3_bqqt6"]
 [ext_resource type="Resource" uid="uid://g2p05lkbrlkw" path="res://resources/demons/wrath.tres" id="4_rtw2f"]
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="4_wu84c"]
@@ -21,7 +21,7 @@ script = ExtResource("1_l6cm7")
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_right = 1221.0
 offset_bottom = 666.0
-texture = ExtResource("2_8ln24")
+texture = ExtResource("2_flqon")
 
 [node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer"]
 offset_left = 132.0
