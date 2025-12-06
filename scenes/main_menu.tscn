@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bfhslpx3f8pml"]
+[gd_scene load_steps=14 format=3 uid="uid://bfhslpx3f8pml"]
 
 [ext_resource type="Script" uid="uid://p76dtda487i8" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="PackedScene" uid="uid://8jvy4ghanp55" path="res://scenes/demon_button.tscn" id="2_ekxnf"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://blh4fsdmtksoy" path="res://resources/demons/greed.tres" id="8_rcqid"]
 [ext_resource type="Resource" uid="uid://kqplkbwouifd" path="res://resources/demons/pride.tres" id="9_1ajci"]
 [ext_resource type="Resource" uid="uid://vor6hqiyihqc" path="res://resources/demons/sloth.tres" id="10_7b55j"]
+[ext_resource type="Script" uid="uid://6on4yuwjfvom" path="res://scripts/main_menu_settings.gd" id="12_rcqid"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_l6cm7")
@@ -64,7 +65,7 @@ demon = ExtResource("9_1ajci")
 
 [node name="SlothButton" parent="CanvasLayer/HFlowContainer" instance=ExtResource("2_ekxnf")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../HBoxContainer/Button3")
+focus_neighbor_bottom = NodePath("../../HBoxContainer/SettingsButton")
 theme_override_font_sizes/font_size = 39
 demon = ExtResource("10_7b55j")
 
@@ -95,10 +96,11 @@ text = "Partners"
 layout_mode = 2
 text = "                      "
 
-[node name="Button3" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
+[node name="SettingsButton" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HFlowContainer/SlothButton")
 text = "Settings"
+script = ExtResource("12_rcqid")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 169.0
@@ -111,3 +113,5 @@ theme_override_fonts/normal_font = ExtResource("4_wu84c")
 theme_override_font_sizes/normal_font_size = 120
 bbcode_enabled = true
 text = " [color=red][shake]Damned if you don't!!!![/shake][/color]"
+
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/SettingsButton" to="CanvasLayer/HBoxContainer/SettingsButton" method="_on_pressed"]
