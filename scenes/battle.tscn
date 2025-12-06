@@ -1,15 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://beehljnlageaq"]
+[gd_scene load_steps=15 format=3 uid="uid://pf8o20wh7nof"]
 
 [ext_resource type="Script" uid="uid://dx1heefco4bqt" path="res://scripts/battle.gd" id="1_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://35mqgxpe0kjo" path="res://assets/art/battle_background.png" id="2_v7i3o"]
-[ext_resource type="Script" path="res://scripts/menu_button.gd" id="3_a12nh"]
+[ext_resource type="Script" uid="uid://qunvc01altko" path="res://scripts/menu_button.gd" id="3_a12nh"]
 [ext_resource type="Script" uid="uid://8p0qqoffhsh4" path="res://scripts/menu_group.gd" id="3_lpir7"]
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="3_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://chervc6xtbap8" path="res://assets/art/Border_filled_oranget.png" id="6_4k1nj"]
 [ext_resource type="Texture2D" uid="uid://bq4i7pv04pr5l" path="res://assets/art/demons/wrath/full.png" id="6_6vh42"]
 [ext_resource type="PackedScene" uid="uid://gb850wcuo607" path="res://scenes/dialog_button.tscn" id="7_f4pi3"]
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="8_v7i3o"]
-[ext_resource type="Script" uid="uid://crcp3ot6ll5o0" path="res://scripts/battle_over_button.gd" id="8_yahae"]
+[ext_resource type="Script" path="res://scripts/battle_over_button.gd" id="8_yahae"]
+[ext_resource type="Script" uid="uid://2flwwihg4561" path="res://scripts/opponent_hp_display.gd" id="11_03edq"]
+[ext_resource type="Script" uid="uid://clrio0i25564" path="res://scripts/player_hp_display.gd" id="12_03edq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4pi3"]
 texture = ExtResource("6_4k1nj")
@@ -157,6 +159,28 @@ script = ExtResource("8_yahae")
 position = Vector2(842, 222)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("6_6vh42")
+
+[node name="OpponentHP" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 832.0
+offset_top = 12.0
+offset_right = 896.0
+offset_bottom = 76.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+texture_progress = ExtResource("6_4k1nj")
+script = ExtResource("11_03edq")
+
+[node name="PlayerHP" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 82.0
+offset_bottom = 74.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+texture_progress = ExtResource("6_4k1nj")
+script = ExtResource("12_03edq")
 
 [connection signal="mouse_entered" from="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" to="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" method="_on_mouse_entered"]
 [connection signal="pressed" from="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" to="CanvasLayer/ItemsMenu/PanelContainer/BattleItemContainer/Back" method="_on_pressed"]

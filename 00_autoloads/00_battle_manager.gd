@@ -36,6 +36,8 @@ func execute_turn() -> void:
 		_attack_with_dialog(player_turn)
 	await Signals.dialog_finished
 	
+	Signals.battle_single_turn.emit()
+	
 	# Partner interjection
 	_random_partner_attacks()
 	
@@ -51,6 +53,8 @@ func execute_turn() -> void:
 	DialogPanel.push_text(demon_turn.dialog_text, current_demon)
 	PlayerManager.hp -= demon_turn.damage
 	await Signals.dialog_finished
+	
+	Signals.battle_single_turn.emit()
 	
 	# Battle end check?
 	if PlayerManager.hp <= 0:
@@ -173,6 +177,7 @@ func _random_partner_attacks() -> void:
 			var demon_turn = _get_demon_turn(demon)
 			_attack_with_dialog(demon_turn, demon)
 			await Signals.dialog_finished
+			Signals.battle_single_turn.emit()
 
 func _get_demon_turn(demon: Demon) -> Dialog:
 	# TODO: More complicated logic here?
