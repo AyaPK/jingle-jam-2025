@@ -37,6 +37,8 @@ func _ready() -> void:
 
 func refresh() -> void:
 	inventory = []
+	insult_dialog_pool = []
+	seduction_dialog_pool = []
 	var chocolate: Item = preload("res://resources/items/chocolate.tres")
 	var flowers: Item = preload("res://resources/items/flowers.tres")
 	var dagger: Item = preload("res://resources/items/dagger.tres")
