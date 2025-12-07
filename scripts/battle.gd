@@ -48,8 +48,13 @@ func _ready() -> void:
 func show_main_buttons() -> void:
 	fight.grab_focus()
 	main_buttons_container.show()
+	_load_item_buttons()
 
 func _load_item_buttons() -> void:
+	for _c in battle_item_container.get_children():
+		if _c is BattleItemButton:
+			_c.queue_free()
+			await _c.tree_exited
 	for item in PlayerManager.inventory:
 		var item_button: BattleItemButton = BATTLE_ITEM_BUTTON.instantiate()
 		battle_item_container.add_child(item_button)

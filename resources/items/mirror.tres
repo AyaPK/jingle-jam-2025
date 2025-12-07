@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://cibnin2ilicgv"]
 
 [ext_resource type="Texture2D" uid="uid://bkdc5swqicoen" path="res://assets/art/items/hand_mirror.png" id="1_1ja5k"]
-[ext_resource type="Script" uid="uid://cqt7djlec0h20" path="res://resources/items/mirror.gd" id="1_jjrku"]
+[ext_resource type="Script" path="res://resources/items/mirror.gd" id="1_jjrku"]
 [ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/items/item.gd" id="1_y10vt"]
 
 [sub_resource type="Resource" id="Resource_otpsa"]

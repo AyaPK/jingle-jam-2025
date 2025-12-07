@@ -14,12 +14,15 @@ enum STATES {
 var battle_state: STATES
 var player_turn
 
+var consumed_items: Array[Item] = []
+
 func _ready() -> void:
 	battle_state = STATES.NOT_IN_BATTLE
 	Signals.battle_turns_started.connect(execute_turn)
 
 func initiate_fight() -> void:
 	_set_up_demon()
+	consumed_items = []
 	battle_state = STATES.AWAITING_TURN_CHOICE
 	DialogPanel.push_text(current_demon.entry_text, current_demon)
 	await Signals.dialog_finished
@@ -32,6 +35,8 @@ func execute_turn() -> void:
 	# Player turn
 	if player_turn is Item:
 		player_turn.effect.trigger()
+		consumed_items.append(player_turn)
+		PlayerManager.consume_item(player_turn)
 	elif player_turn is Dialog:
 		_attack_with_dialog(player_turn)
 		Signals.damage_dealt.emit()
@@ -42,6 +47,9 @@ func execute_turn() -> void:
 	# Partner interjection
 	_random_partner_attacks()
 	
+	if GameStateManager.has_any_partners:
+		await Signals.demon_turns_finished
+	
 	# Battle end checks?
 	if demon_hp <= 0:
 		_demon_beaten()
@@ -49,9 +57,7 @@ func execute_turn() -> void:
 	elif demon_seduction >= current_demon.seduction_target:
 		_demon_seduced()
 		return
-	
-	if GameStateManager.has_any_partners:
-		await Signals.demon_turns_finished
+		
 	# Demon turn
 	DialogPanel.push_text(demon_turn.dialog_text, current_demon)
 	PlayerManager.hp -= demon_turn.damage
@@ -86,6 +92,7 @@ func _demon_beaten() -> void:
 	PlayerManager.loot_demon(current_demon)
 	DialogPanel.push_text(current_demon.beaten_text, current_demon)
 	await Signals.dialog_finished
+	PlayerManager.return_consumed_items(consumed_items)
 	Signals.battle_demon_beaten.emit()
 	_end_battle()
 

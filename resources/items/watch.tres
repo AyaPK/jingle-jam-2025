@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://cyq36kxl7wqln"]
 
-[ext_resource type="Script" uid="uid://co0jchjv4xh80" path="res://resources/items/watch.gd" id="1_8fa83"]
+[ext_resource type="Script" path="res://resources/items/watch.gd" id="1_8fa83"]
 [ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/items/item.gd" id="1_kb08x"]
 [ext_resource type="Texture2D" uid="uid://drjr4tieq3ro2" path="res://assets/art/items/watch.png" id="1_wuffw"]
 

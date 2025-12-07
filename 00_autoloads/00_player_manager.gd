@@ -88,3 +88,10 @@ func _add_dialog_to_pool(dialog: Dialog) -> void:
 		insult_dialog_pool.append(dialog)
 	else:
 		seduction_dialog_pool.append(dialog)
+
+func consume_item(item: Item) -> void:
+	inventory.erase(item)
+
+func return_consumed_items(items: Array[Item]) -> void:
+	for item in items:
+		inventory.append(item)

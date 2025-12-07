@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://crcp3ot6ll5o0" path="res://scripts/battle_over_button.gd" id="8_yahae"]
 [ext_resource type="Script" uid="uid://2flwwihg4561" path="res://scripts/opponent_hp_display.gd" id="11_03edq"]
 [ext_resource type="Texture2D" uid="uid://dnv1t5jjajrnp" path="res://assets/art/ui/progress_transparent.png" id="11_6ni85"]
-[ext_resource type="Script" uid="uid://clrio0i25564" path="res://scripts/player_hp_display.gd" id="12_03edq"]
+[ext_resource type="Script" path="res://scripts/player_hp_display.gd" id="12_03edq"]
 [ext_resource type="Texture2D" uid="uid://c10p2s7q787qq" path="res://assets/art/ui/progress_red.png" id="12_vceff"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4pi3"]
