@@ -20,3 +20,6 @@ enum DIALOG_TYPE {
 @export_category("Stats")
 @export var damage: int
 @export var seduction: int
+
+func get_dialog_source() -> String:
+	return resource_path.split("/")[-2]
