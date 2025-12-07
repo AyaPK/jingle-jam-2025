@@ -67,6 +67,4 @@ func demon_is_beaten(demon: Demon) -> bool:
 
 func process_battle_left() -> void:
 	if !has_available_demons:
-		# TODO: Process game end
-		print("END OF GAME!!!!")
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://scenes/credits.tscn")

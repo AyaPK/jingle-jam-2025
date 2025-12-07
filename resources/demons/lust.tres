@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_wp25f"]
 [ext_resource type="Texture2D" uid="uid://lwxu1qmdih4i" path="res://assets/art/demons/lust/lust.png" id="1_xuqwj"]
 [ext_resource type="Resource" uid="uid://dubkmja4j1o4v" path="res://resources/dialog/lust/lust_dialog_1.tres" id="2_82ws0"]
-[ext_resource type="Texture2D" uid="uid://mtrj47odsqyb" path="res://assets/art/demons/lust/lust_headshot.png" id="2_dvtwb"]
+[ext_resource type="Texture2D" uid="uid://mtrj47odsqyb" path="res://assets/art/demons/lust/lust-headshot.png" id="2_dvtwb"]
 [ext_resource type="Resource" uid="uid://dwf8aslu2upa3" path="res://resources/dialog/lust/lust_dialog_2.tres" id="3_gnebo"]
 [ext_resource type="Resource" uid="uid://denl015iliimi" path="res://resources/dialog/lust/lust_dialog_3.tres" id="4_xe465"]
 [ext_resource type="Resource" uid="uid://c1k1lf1xnn5jc" path="res://resources/dialog/lust/lust_dialog_4.tres" id="5_fdwf1"]
