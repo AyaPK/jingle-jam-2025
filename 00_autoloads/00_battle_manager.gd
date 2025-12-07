@@ -168,10 +168,29 @@ func _pick_any_unique(pool: Array, existing: Array) -> Dialog:
 	# If pool is too small, return ANY dialog (shows a warning condition)
 	return pool[0]
 
+# what to scale the damage by when progressing the game
+# only scale the player's dialog to make the demon's stronger
+func _difficulity_scaling(dialog: Dialog) -> float:
+	if dialog.resource_path.split("/")[-2] != "player":
+		return 1.0
+
+	var defeated_demons = GameStateManager.demon_states.values().filter(func(v): return v != GameStateManager.DEMON_STATES.AVAILABLE).size()
+
+	return [
+		1.0,
+		0.8,
+		0.6,
+		0.5,
+		0.4,
+		0.3,
+		0.2,
+		0.0, # Should never happen
+	][defeated_demons]
+
 func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 	var text: String = dialog.dialog_text if demon else "You: "+dialog.dialog_text
 	DialogPanel.push_text(text, demon)
-	demon_hp -= dialog.damage
+	demon_hp -= int(dialog.damage * _difficulity_scaling(dialog))
 	demon_seduction += dialog.seduction
 	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
 		AudioManager.play_sfx("hit")

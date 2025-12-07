@@ -70,9 +70,18 @@ func loot_demon(demon: Demon) -> void:
 	var demon_rare_dialog = demon.battle_dialog.filter(func(dialog: Dialog): return dialog.rarity == Dialog.DIALOG_RARITY.RARE)
 	var demon_ultra_rare_dialog = demon.battle_dialog.filter(func(dialog: Dialog): return dialog.rarity == Dialog.DIALOG_RARITY.ULTRA_RARE)
 	
-	if (demon_common_dialog.size() > 0): _add_dialog_to_pool(demon_common_dialog.pick_random())
-	if (demon_rare_dialog.size() > 0): _add_dialog_to_pool(demon_rare_dialog.pick_random())
-	if (demon_ultra_rare_dialog.size() > 0): _add_dialog_to_pool(demon_ultra_rare_dialog.pick_random())
+	var demon_common_seduce = demon_common_dialog.filter(func(dialog: Dialog): return dialog.type == Dialog.DIALOG_TYPE.SEDUCE)
+	var demon_rare_seduce = demon_rare_dialog.filter(func(dialog: Dialog): return dialog.type == Dialog.DIALOG_TYPE.SEDUCE)
+	var demon_ultra_rare_seduce = demon_ultra_rare_dialog.filter(func(dialog: Dialog): return dialog.type == Dialog.DIALOG_TYPE.SEDUCE)
+	
+	# 75/25 weighting to seduction dialog
+	var weighted_common_pool = demon_common_dialog + demon_common_seduce + demon_common_seduce
+	var weighted_rare_pool = demon_rare_dialog + demon_rare_seduce + demon_rare_seduce
+	var weighted_ultra_rare_pool = demon_ultra_rare_dialog + demon_ultra_rare_seduce + demon_ultra_rare_seduce
+	
+	if (demon_common_dialog.size() > 0): _add_dialog_to_pool(weighted_common_pool.pick_random())
+	if (demon_rare_dialog.size() > 0): _add_dialog_to_pool(weighted_rare_pool.pick_random())
+	if (demon_ultra_rare_dialog.size() > 0): _add_dialog_to_pool(weighted_ultra_rare_pool.pick_random())
 
 func _add_dialog_to_pool(dialog: Dialog) -> void:
 	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
