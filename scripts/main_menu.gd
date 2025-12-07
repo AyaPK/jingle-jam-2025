@@ -4,10 +4,7 @@ extends Node2D
 
 func _ready() -> void:
 	button.grab_focus()
-	
-	if !GameStateManager.has_any_partners:
-		partners_button.hide()
-	
+
 	AudioManager.play_music("menu")
 
 func _process(_delta: float) -> void:
