@@ -83,6 +83,7 @@ func _player_lost() -> void:
 	_end_battle()
 
 func _demon_beaten() -> void:
+	PlayerManager.loot_demon(current_demon)
 	DialogPanel.push_text(current_demon.beaten_text, current_demon)
 	await Signals.dialog_finished
 	Signals.battle_demon_beaten.emit()
@@ -113,7 +114,7 @@ func get_dialog_options() -> Array[Dialog]:
 	# Seduction influence (0–1)
 	var base_seduction := float(demon_seduction) / float(current_demon.seduction_target)
 
-	# Ensure seduction is ALWAYS at least 15% likely
+	# Ensure seduction is ALWAYS at least 15% likely and at most 70%
 	var seduction_weight: float = clamp(base_seduction, 0.15, 0.7)
 
 	for i in range(4):

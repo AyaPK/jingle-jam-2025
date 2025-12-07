@@ -37,3 +37,24 @@ func _ready() -> void:
 
 func reset_player_health() -> void:
 	hp = MAX_HP
+
+func loot_demon(demon: Demon) -> void:
+	var demon_common_dialog = demon.battle_dialog.filter(func(dialog: Dialog): return dialog.rarity == Dialog.DIALOG_RARITY.COMMON)
+	var demon_rare_dialog = demon.battle_dialog.filter(func(dialog: Dialog): return dialog.rarity == Dialog.DIALOG_RARITY.RARE)
+	var demon_ultra_rare_dialog = demon.battle_dialog.filter(func(dialog: Dialog): return dialog.rarity == Dialog.DIALOG_RARITY.ULTRA_RARE)
+	
+	var looted_dialog = [
+		demon_common_dialog.pick_random(),
+		demon_rare_dialog.pick_random(),
+		demon_ultra_rare_dialog.pick_random(),
+	]
+	
+	for dialog in looted_dialog:
+		if (dialog != null):
+			_add_dialog_to_pool(dialog)
+
+func _add_dialog_to_pool(dialog: Dialog) -> void:
+	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
+		insult_dialog_pool.append(dialog)
+	else:
+		seduction_dialog_pool.append(dialog)
