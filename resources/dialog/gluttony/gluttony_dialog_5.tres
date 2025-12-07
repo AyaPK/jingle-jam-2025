@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://d3g2g6xh03mhl"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_aoqgn"]
+
+[resource]
+script = ExtResource("1_aoqgn")
+name = "hold your liquor"
+dialog_text = "If you can’t hold your liquor, at least try holding your dignity."
+rarity = 1
+damage = 20
+seduction = 15
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

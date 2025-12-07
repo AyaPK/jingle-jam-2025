@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_u5qot")
 name = "Dont"
-dialog_text = "Why are you looking at me like that? …Tch. Don’t stop"
+dialog_text = "Why are you looking at me like that? ...Tch. Don’t stop"
 type = 1
 damage = 10
 seduction = 20

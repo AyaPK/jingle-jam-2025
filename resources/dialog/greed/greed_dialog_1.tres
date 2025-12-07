@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_lf43q")
 name = "I'll take what I want"
-dialog_text = "Oh, you’re cute… in a bargain-bin sort of way. I’d pick you up if I thought you had any value, but maybe I’ll just take what I want and leave you with the emotional change"
+dialog_text = "I want you. And when I want something, I take it."
+type = 1
 damage = 10
+seduction = 20
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

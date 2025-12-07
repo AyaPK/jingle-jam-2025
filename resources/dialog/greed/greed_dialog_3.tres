@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://cb4hxh3l8ngei"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_f2j63"]
+
+[resource]
+script = ExtResource("1_f2j63")
+name = "You're a luxury"
+dialog_text = "You’re a luxury I want to drown in."
+type = 1
+damage = 10
+seduction = 20
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

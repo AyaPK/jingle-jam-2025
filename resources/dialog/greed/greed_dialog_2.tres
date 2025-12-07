@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dhdqiwgcgstqc"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_5myoh"]
+
+[resource]
+script = ExtResource("1_5myoh")
+name = "Offer yourself properly"
+dialog_text = "Offer yourself properly, and maybe I’ll let you share in my fortune."
+type = 1
+damage = 10
+seduction = 20
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bw8co3ljo5py"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_pypl6"]
+
+[resource]
+script = ExtResource("1_pypl6")
+name = "  Sell it back for a profit"
+dialog_text = "I’d steal your heart… but I’d probably sell it back for a profit."
+damage = 19
+seduction = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

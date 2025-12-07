@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bupktp13kvavy"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_8rawv"]
+
+[resource]
+script = ExtResource("1_8rawv")
+name = " crush you just a little slower"
+dialog_text = "You tempt me... to crush you just a little slower."
+damage = 19
+seduction = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bp3404g86s6ky"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_s33gq"]
+
+[resource]
+script = ExtResource("1_s33gq")
+name = "I don't mind overindulging"
+dialog_text = "If you’re the aftertaste, I don’t mind overindulging."
+rarity = 1
+type = 1
+damage = 9
+seduction = 20
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

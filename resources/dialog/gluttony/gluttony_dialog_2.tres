@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://ppobqani0fl1"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_w44tk"]
+
+[resource]
+script = ExtResource("1_w44tk")
+name = "Come on, drink."
+dialog_text = "Come on, drink. Maybe it’ll help you grow a backbone."
+damage = 15
+seduction = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"
