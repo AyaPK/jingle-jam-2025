@@ -64,7 +64,6 @@ text = "Back"
 script = ExtResource("3_a12nh")
 
 [node name="FightMenu" type="CanvasLayer" parent="CanvasLayer" node_paths=PackedStringArray("first_button")]
-visible = false
 script = ExtResource("3_lpir7")
 show_in_menu_state = 1
 first_button = NodePath("BattleButtonContainer/Back")
