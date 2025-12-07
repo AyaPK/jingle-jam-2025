@@ -4,6 +4,9 @@ var current_demon: Demon
 var demon_hp: int
 var demon_seduction: int
 
+var seduction_percentage: float:
+	get: return float(demon_seduction) / float(current_demon.seduction_target)
+
 enum STATES {
 	NOT_IN_BATTLE,
 	AWAITING_TURN_CHOICE,
@@ -116,11 +119,8 @@ func get_dialog_options() -> Array[Dialog]:
 	var insult_pool = PlayerManager.insult_dialog_pool
 	var seduction_pool = PlayerManager.seduction_dialog_pool
 
-	# Seduction influence (0–1)
-	var base_seduction := float(demon_seduction) / float(current_demon.seduction_target)
-
 	# Ensure seduction is ALWAYS at least 15% likely and at most 70%
-	var seduction_weight: float = clamp(base_seduction, 0.15, 0.7)
+	var seduction_weight: float = clamp(seduction_percentage, 0.15, 0.7)
 
 	for i in range(4):
 		var selected_dialog = null
@@ -203,7 +203,7 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 
 func _random_partner_attacks() -> void:
 	for demon in GameStateManager.seduced_demons:
-		if randi() % 100 < 25:
+		if randi() % 100 < (25.0 * (1.0 - seduction_percentage)):
 			var demon_turn = _get_demon_turn(demon)
 			_attack_with_dialog(demon_turn, demon)
 			Signals.damage_dealt.emit()
@@ -211,7 +211,7 @@ func _random_partner_attacks() -> void:
 			Signals.battle_single_turn.emit()
 
 func _get_demon_turn(demon: Demon) -> Dialog:
-	var seduction_weight := (float(demon_seduction) / float(current_demon.seduction_target)) * 100
+	var seduction_weight := seduction_percentage * 100
 	var capped_weight = clamp(seduction_weight, 5, 70)
 	if randi() % 100 < capped_weight:
 		return demon.battle_seduce_dialog.pick_random()
