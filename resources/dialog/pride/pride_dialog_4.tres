@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://b5sl3bjrufq0i"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_tlrnf"]
+
+[resource]
+script = ExtResource("1_tlrnf")
+name = "I've surpassed you"
+dialog_text = "Do you really think you’re my equal? I’ve surpassed what you can even imagine"
+rarity = 1
+damage = 15
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://c01auccfcjfpb"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_6ejl4"]
+
+[resource]
+script = ExtResource("1_6ejl4")
+name = "You think you're special?"
+dialog_text = "You think you’re special? You’re just lucky. And I despise you for every scrap of that luck"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

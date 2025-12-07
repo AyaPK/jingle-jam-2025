@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://nfbi2d7yfbe3"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_u5qot"]
+
+[resource]
+script = ExtResource("1_u5qot")
+name = "Dont"
+dialog_text = "Why are you looking at me like that? …Tch. Don’t stop"
+type = 1
+damage = 10
+seduction = 20
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

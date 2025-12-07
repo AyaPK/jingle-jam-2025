@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://lccvgfx6jwwb"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_uiynj"]
+
+[resource]
+script = ExtResource("1_uiynj")
+name = "You're laughable"
+dialog_text = "Your attempts are laughable. I’ve seen ants display more dignity"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

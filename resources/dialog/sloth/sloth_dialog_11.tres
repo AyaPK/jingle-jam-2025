@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://th0lucp6dnpe"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_cte6o"]
+
+[resource]
+script = ExtResource("1_cte6o")
+name = "You disgust me "
+dialog_text = "Your energy disgusts me. It flails around, desperate to matter. It won’t"
+damage = 12
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

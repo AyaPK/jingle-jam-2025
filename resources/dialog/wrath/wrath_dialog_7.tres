@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dlavi7rc8ewoo"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_opxi7"]
+
+[resource]
+script = ExtResource("1_opxi7")
+name = "Not worth my full wrath"
+dialog_text = "You’re not worth my full wrath… but that doesn’t mean I won’t enjoy tearing you apart anyway"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

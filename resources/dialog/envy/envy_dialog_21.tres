@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://diw5ihwufqytv"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_qwv5w"]
+
+[resource]
+script = ExtResource("1_qwv5w")
+name = "Beneath"
+dialog_text = "You’re beneath me. Yet somehow, you still get under my skin"
+type = 1
+damage = 5
+seduction = 30
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

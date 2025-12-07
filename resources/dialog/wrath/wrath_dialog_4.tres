@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://clhg7w2eeakxd"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_1dc51"]
+
+[resource]
+script = ExtResource("1_1dc51")
+name = "Stand against me"
+dialog_text = "Do you really think you can stand against me? I could tear you apart before you blink"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bqupncnht4tpp"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_f347e"]
+
+[resource]
+script = ExtResource("1_f347e")
+name = "You efforts are quaint"
+dialog_text = "Do you really believe you could ever match me? Your efforts are quaint at best, and utterly meaningless at worst"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

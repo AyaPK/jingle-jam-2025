@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://8h0ft3qplkwx"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_3iivd"]
+
+[resource]
+script = ExtResource("1_3iivd")
+name = "You attempt to shine"
+dialog_text = "You attempt to shine, but it’s faint and flickering against my brilliance. Even your greatest effort is nothing compared to my presence"
+rarity = 1
+damage = 15
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

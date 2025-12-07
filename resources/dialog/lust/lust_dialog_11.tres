@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://chlbophbbr1g7"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_m8htl"]
+
+[resource]
+script = ExtResource("1_m8htl")
+name = "Beyond your imagination"
+dialog_text = "I could show you pleasure beyond your imagination… but I might grow bored halfway through"
+type = 1
+damage = 10
+seduction = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

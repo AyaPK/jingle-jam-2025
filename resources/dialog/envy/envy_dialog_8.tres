@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dndih420c7fra"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_1nsq8"]
+
+[resource]
+script = ExtResource("1_1nsq8")
+name = "Watching you try is amusing"
+dialog_text = "Watching you try is amusing. Watching you believe you’re competent is hilarious"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

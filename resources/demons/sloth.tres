@@ -1,10 +1,26 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=6 format=3 uid="uid://vor6hqiyihqc"]
+[gd_resource type="Resource" script_class="Demon" load_steps=22 format=3 uid="uid://vor6hqiyihqc"]
 
 [ext_resource type="Texture2D" uid="uid://tioakh6g210i" path="res://assets/art/demons/sloth/Sloth_bottom.png" id="1_210sc"]
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_wa7or"]
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_wwao2"]
 [ext_resource type="Texture2D" uid="uid://cwxggw43ef30v" path="res://assets/art/demons/sloth/Sloth_headshot.png" id="2_a5a3f"]
 [ext_resource type="Resource" uid="uid://b63usjaf718mt" path="res://resources/dialog/sloth/sloth_dialog_1.tres" id="2_kk7ca"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_2.tres" id="3_bfl82"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_3.tres" id="4_shb07"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_4.tres" id="5_rptu2"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_5.tres" id="6_v16t7"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_6.tres" id="7_o8yma"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_7.tres" id="8_70w72"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_8.tres" id="9_84ct0"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_9.tres" id="10_iruej"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_10.tres" id="11_pydul"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_11.tres" id="12_i0mtd"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_12.tres" id="13_y8aso"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_13.tres" id="14_eu7hh"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_14.tres" id="15_uulw8"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_15.tres" id="16_vtfvb"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_16.tres" id="17_ywhny"]
+[ext_resource type="Resource" path="res://resources/dialog/sloth/sloth_dialog_17.tres" id="18_7w76a"]
 
 [resource]
 script = ExtResource("1_wa7or")
@@ -16,5 +32,5 @@ entry_text = "I woke up for this... you'd better be worth"
 beaten_text = "Back to bed :)"
 seduced_text = "CNC means I can nap during :)	"
 lose_text = "You look so peaceful now! I'll join soon <3"
-battle_dialog = Array[ExtResource("1_wwao2")]([ExtResource("2_kk7ca")])
+battle_dialog = Array[ExtResource("1_wwao2")]([ExtResource("2_kk7ca"), ExtResource("3_bfl82"), ExtResource("4_shb07"), ExtResource("5_rptu2"), ExtResource("6_v16t7"), ExtResource("7_o8yma"), ExtResource("8_70w72"), ExtResource("9_84ct0"), ExtResource("10_iruej"), ExtResource("11_pydul"), ExtResource("12_i0mtd"), ExtResource("13_y8aso"), ExtResource("14_eu7hh"), ExtResource("15_uulw8"), ExtResource("16_vtfvb"), ExtResource("17_ywhny"), ExtResource("18_7w76a")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

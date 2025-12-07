@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://6v4xffyyds2h"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_pifk3"]
+
+[resource]
+script = ExtResource("1_pifk3")
+name = "Maybe we can nap together"
+dialog_text = "If you want to hang out that bad maybe we can nap together"
+type = 1
+damage = 5
+seduction = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

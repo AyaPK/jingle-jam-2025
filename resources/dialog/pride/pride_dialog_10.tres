@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://ck8s82br452vw"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_dejfn"]
+
+[resource]
+script = ExtResource("1_dejfn")
+name = "Worth my attention"
+dialog_text = "You think you’re worth my attention? Perhaps not, yet I can’t help but savor the way you cling to it"
+type = 1
+damage = 10
+seduction = 5
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://cgyxk0wrsiyfa"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_ow67r"]
+
+[resource]
+script = ExtResource("1_ow67r")
+name = "Drain"
+dialog_text = "Your presence drains motivation more effectively than I ever could, and that’s literally my specialty"
+rarity = 1
+damage = 15
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://0qhwwdcbaukp"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_8lipc"]
+
+[resource]
+script = ExtResource("1_8lipc")
+name = "Pulse"
+dialog_text = "Ugh. Look what you’ve done. You've gone and made my pulse pick up a little"
+type = 1
+damage = 10
+seduction = 20
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

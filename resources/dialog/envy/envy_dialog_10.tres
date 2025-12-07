@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://uw5sftseid53"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_82yhv"]
+
+[resource]
+script = ExtResource("1_82yhv")
+name = "You have nothing I want"
+dialog_text = "You have nothing I want. I just loathe the fact that the world wastes breath keeping you alive"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

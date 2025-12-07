@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dpwufwwd0gihl"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_4c8b3"]
+
+[resource]
+script = ExtResource("1_4c8b3")
+name = "You're a child wearing a crown"
+dialog_text = "Your confidence is amusing, like a child wearing a crown far too big for their head. It doesn’t make you important—it makes you a joke"
+rarity = 2
+damage = 20
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

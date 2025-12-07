@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://c1k1lf1xnn5jc"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_lw1qb"]
+
+[resource]
+script = ExtResource("1_lw1qb")
+name = "Dont mistake"
+dialog_text = "Don’t mistake my presence for desire. If I wanted you, you wouldn’t have the strength to stand"
+rarity = 1
+damage = 15
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

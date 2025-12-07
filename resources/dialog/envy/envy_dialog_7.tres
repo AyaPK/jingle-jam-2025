@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://jpsoubsv236i"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_leqvy"]
+
+[resource]
+script = ExtResource("1_leqvy")
+name = "Your confidence disgusts me"
+dialog_text = "Your confidence disgusts me. I want to peel it off and wear it myself"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,10 +1,21 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=6 format=3 uid="uid://g2p05lkbrlkw"]
+[gd_resource type="Resource" script_class="Demon" load_steps=17 format=3 uid="uid://g2p05lkbrlkw"]
 
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_0no5g"]
 [ext_resource type="Texture2D" uid="uid://b0hipjfm1x7jj" path="res://assets/art/demons/wrath/headshot.png" id="1_a37yd"]
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_jqpd5"]
 [ext_resource type="Texture2D" uid="uid://bq4i7pv04pr5l" path="res://assets/art/demons/wrath/full.png" id="1_owop7"]
 [ext_resource type="Resource" uid="uid://d4ahgk2tu4nau" path="res://resources/dialog/wrath/wrath_dialog_1.tres" id="2_b7hrw"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_2.tres" id="3_gkxtj"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_3.tres" id="4_hued7"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_4.tres" id="5_h4s61"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_5.tres" id="6_x6pyj"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_6.tres" id="7_u2t2d"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_7.tres" id="8_3ohh4"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_8.tres" id="9_i8t8v"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_9.tres" id="10_ng8pn"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_10.tres" id="11_mkduv"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_11.tres" id="12_molqk"]
+[ext_resource type="Resource" path="res://resources/dialog/wrath/wrath_dialog_12.tres" id="13_3vuc5"]
 
 [resource]
 script = ExtResource("1_jqpd5")
@@ -16,5 +27,5 @@ entry_text = "Let's dance"
 beaten_text = "You'll pay for this"
 seduced_text = "Choke me daddy"
 lose_text = "Get rekt kiddo"
-battle_dialog = Array[ExtResource("1_0no5g")]([ExtResource("2_b7hrw")])
+battle_dialog = Array[ExtResource("1_0no5g")]([ExtResource("2_b7hrw"), ExtResource("3_gkxtj"), ExtResource("4_hued7"), ExtResource("5_h4s61"), ExtResource("6_x6pyj"), ExtResource("7_u2t2d"), ExtResource("8_3ohh4"), ExtResource("9_i8t8v"), ExtResource("10_ng8pn"), ExtResource("11_mkduv"), ExtResource("12_molqk"), ExtResource("13_3vuc5")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

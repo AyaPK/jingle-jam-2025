@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://bbi4kj6ccvde1"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_tmeww"]
+
+[resource]
+script = ExtResource("1_tmeww")
+name = "I could toy with you endlessly"
+dialog_text = "I could toy with you endlessly, and you’d probably enjoy every moment. That thought alone makes me smile"
+type = 1
+damage = 10
+seduction = 40
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

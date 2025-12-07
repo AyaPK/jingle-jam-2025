@@ -1,10 +1,22 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=6 format=3 uid="uid://cgdn105ouf4xy"]
+[gd_resource type="Resource" script_class="Demon" load_steps=18 format=3 uid="uid://cgdn105ouf4xy"]
 
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_342qf"]
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_wp25f"]
 [ext_resource type="Texture2D" uid="uid://lwxu1qmdih4i" path="res://assets/art/demons/lust/lust.png" id="1_xuqwj"]
 [ext_resource type="Resource" uid="uid://dubkmja4j1o4v" path="res://resources/dialog/lust/lust_dialog_1.tres" id="2_82ws0"]
 [ext_resource type="Texture2D" uid="uid://mtrj47odsqyb" path="res://assets/art/demons/lust/lust_headshot.png" id="2_dvtwb"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_2.tres" id="3_gnebo"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_3.tres" id="4_xe465"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_4.tres" id="5_fdwf1"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_5.tres" id="6_nlkbf"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_6.tres" id="7_8dup0"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_7.tres" id="8_g7j5k"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_8.tres" id="9_pqypx"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_9.tres" id="10_w6t75"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_10.tres" id="11_sqix1"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_11.tres" id="12_j71ch"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_12.tres" id="13_q2t18"]
+[ext_resource type="Resource" path="res://resources/dialog/lust/lust_dialog_13.tres" id="14_t5r5j"]
 
 [resource]
 script = ExtResource("1_342qf")
@@ -16,5 +28,5 @@ entry_text = "Huh... kinda cute"
 beaten_text = "Oh... I like that"
 seduced_text = "Come over here and let me show you your prize"
 lose_text = "That ain't hot"
-battle_dialog = Array[ExtResource("1_wp25f")]([ExtResource("2_82ws0")])
+battle_dialog = Array[ExtResource("1_wp25f")]([ExtResource("2_82ws0"), ExtResource("3_gnebo"), ExtResource("4_xe465"), ExtResource("5_fdwf1"), ExtResource("6_nlkbf"), ExtResource("7_8dup0"), ExtResource("8_g7j5k"), ExtResource("9_pqypx"), ExtResource("10_w6t75"), ExtResource("11_sqix1"), ExtResource("12_j71ch"), ExtResource("13_q2t18"), ExtResource("14_t5r5j")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

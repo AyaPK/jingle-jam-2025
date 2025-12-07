@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://jnxr1pbjsk0c"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_s8yxc"]
+
+[resource]
+script = ExtResource("1_s8yxc")
+name = "I am fear"
+dialog_text = "You think fear will stop me? I am fear. And you’re already trembling"
+rarity = 2
+damage = 20
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

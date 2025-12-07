@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://cd2g7nx3rbphf"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_1xadn"]
+
+[resource]
+script = ExtResource("1_1xadn")
+name = "Weakness scream"
+dialog_text = "Every move you make screams weakness. I can smell it on you"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

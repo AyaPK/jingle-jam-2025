@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://dw5qfhlagl8gn"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_yjcc3"]
+
+[resource]
+script = ExtResource("1_yjcc3")
+name = "You can pet my snake"
+dialog_text = "Keep going the way you are and maybe you can pet my snake"
+rarity = 2
+type = 1
+damage = 5
+seduction = 25
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

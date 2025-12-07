@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://cj6pt2hjam8p3"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_x0cyx"]
+
+[resource]
+script = ExtResource("1_x0cyx")
+name = "Talk too much"
+dialog_text = "Mm… you talk too much. But your voice is comfortable. Keep going"
+type = 1
+damage = 5
+seduction = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

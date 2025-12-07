@@ -1,10 +1,30 @@
-[gd_resource type="Resource" script_class="Demon" load_steps=6 format=3 uid="uid://1eex4uu1o3kj"]
+[gd_resource type="Resource" script_class="Demon" load_steps=26 format=3 uid="uid://1eex4uu1o3kj"]
 
 [ext_resource type="Script" uid="uid://cxxo2oqdhj527" path="res://resources/demons/demon.gd" id="1_hqoho"]
 [ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_urf2m"]
 [ext_resource type="Resource" uid="uid://xjl2om7q5hjs" path="res://resources/dialog/envy/envy_dialog_1.tres" id="2_jmi2a"]
 [ext_resource type="Texture2D" uid="uid://cx7h7p3uwleea" path="res://assets/art/demons/envy/envy-bottom.png" id="3_nckp3"]
+[ext_resource type="Resource" uid="uid://jaabd21oj1tn" path="res://resources/dialog/envy/envy_dialog_2.tres" id="3_t7kmn"]
 [ext_resource type="Texture2D" uid="uid://dfpjthhrpjv2f" path="res://assets/art/demons/envy/envy-headshot.png" id="4_73bbm"]
+[ext_resource type="Resource" uid="uid://dw5qfhlagl8gn" path="res://resources/dialog/envy/envy_dialog_3.tres" id="4_dsx78"]
+[ext_resource type="Resource" uid="uid://7sr7ilcg6fab" path="res://resources/dialog/envy/envy_dialog_4.tres" id="5_3gwpe"]
+[ext_resource type="Resource" uid="uid://bjsn7gttpe018" path="res://resources/dialog/envy/envy_dialog_5.tres" id="6_dm8qb"]
+[ext_resource type="Resource" uid="uid://c01auccfcjfpb" path="res://resources/dialog/envy/envy_dialog_6.tres" id="7_r2qfi"]
+[ext_resource type="Resource" uid="uid://jpsoubsv236i" path="res://resources/dialog/envy/envy_dialog_7.tres" id="8_hdlw2"]
+[ext_resource type="Resource" uid="uid://dndih420c7fra" path="res://resources/dialog/envy/envy_dialog_8.tres" id="9_1klyn"]
+[ext_resource type="Resource" uid="uid://b3gemmhf1obhx" path="res://resources/dialog/envy/envy_dialog_9.tres" id="10_ivi5j"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_10.tres" id="11_dl3b2"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_11.tres" id="12_j7vis"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_12.tres" id="13_jd4oj"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_13.tres" id="14_bpnmj"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_14.tres" id="15_bfuk8"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_15.tres" id="16_wbtwl"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_16.tres" id="17_gxkyb"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_17.tres" id="18_8gefk"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_18.tres" id="19_71lxb"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_19.tres" id="20_ll5b0"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_20.tres" id="21_krgg7"]
+[ext_resource type="Resource" path="res://resources/dialog/envy/envy_dialog_21.tres" id="22_oru3w"]
 
 [resource]
 script = ExtResource("1_hqoho")
@@ -16,5 +36,5 @@ entry_text = "Oh you think you're hot shit"
 beaten_text = "God damn, you were hot shit"
 seduced_text = "I hope I have you all to myself"
 lose_text = "I wish I was more like you"
-battle_dialog = Array[ExtResource("1_urf2m")]([ExtResource("2_jmi2a")])
+battle_dialog = Array[ExtResource("1_urf2m")]([ExtResource("2_jmi2a"), ExtResource("3_t7kmn"), ExtResource("4_dsx78"), ExtResource("5_3gwpe"), ExtResource("6_dm8qb"), ExtResource("7_r2qfi"), ExtResource("8_hdlw2"), ExtResource("9_1klyn"), ExtResource("10_ivi5j"), ExtResource("11_dl3b2"), ExtResource("12_j7vis"), ExtResource("13_jd4oj"), ExtResource("14_bpnmj"), ExtResource("15_bfuk8"), ExtResource("16_wbtwl"), ExtResource("17_gxkyb"), ExtResource("18_8gefk"), ExtResource("19_71lxb"), ExtResource("20_ll5b0"), ExtResource("21_krgg7"), ExtResource("22_oru3w")])
 metadata/_custom_type_script = "uid://cxxo2oqdhj527"

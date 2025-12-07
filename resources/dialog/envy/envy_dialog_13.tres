@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://8jqpfcqve0uk"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_4brwp"]
+
+[resource]
+script = ExtResource("1_4brwp")
+name = "Step over"
+dialog_text = "You’re not someone to envy. You’re someone to step over"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://l836da56ciwo"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_yqvjr"]
+
+[resource]
+script = ExtResource("1_yqvjr")
+name = "Reduced to insignificance"
+dialog_text = "I could reduce you to insignificance in a single glance. Still, there’s something delicious about the way you look at me, hoping to matter"
+type = 1
+damage = 10
+seduction = 15
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

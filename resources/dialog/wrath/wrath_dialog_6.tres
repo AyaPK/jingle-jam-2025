@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://uxt1yas4jyht"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_oi3uu"]
+
+[resource]
+script = ExtResource("1_oi3uu")
+name = "You're slow, clumsy and insignificant"
+dialog_text = "You’re slow, clumsy, and insignificant. Fighting you isn’t even a challenge"
+damage = 10
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"
