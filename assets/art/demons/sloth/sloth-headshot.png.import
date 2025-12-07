@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwxggw43ef30v"
-path="res://.godot/imported/Sloth_headshot.png-1df16333a5a7b2dffa530165ec00f0b1.ctex"
+path="res://.godot/imported/sloth-headshot.png-92a5beabfce5a331e9aa2f6fe9dc5b84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/demons/sloth/Sloth_headshot.png"
-dest_files=["res://.godot/imported/Sloth_headshot.png-1df16333a5a7b2dffa530165ec00f0b1.ctex"]
+source_file="res://assets/art/demons/sloth/sloth-headshot.png"
+dest_files=["res://.godot/imported/sloth-headshot.png-92a5beabfce5a331e9aa2f6fe9dc5b84.ctex"]
 
 [params]
 

@@ -23,7 +23,7 @@ var menu_state = MenuState.HOME;
 @onready var player_hp: TextureProgressBar = $CanvasLayer/PlayerHP
 
 const BATTLE_ITEM_BUTTON = preload("res://scenes/battle_item_button.tscn")
-const DIALOG_BUTTON = preload("uid://gb850wcuo607")
+const DIALOG_BUTTON = preload("res://scenes/dialog_option.tscn")
 
 func _ready() -> void:
 	$CanvasLayer/Opponent.texture = BattleManager.current_demon.full_image

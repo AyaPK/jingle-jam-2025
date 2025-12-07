@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mtrj47odsqyb"
-path="res://.godot/imported/lust_headshot.png-f73b8cc684874bdcb766a9300dcd4f27.ctex"
+uid="uid://b0hipjfm1x7jj"
+path="res://.godot/imported/wrath-headshot.png-7ca1afb08eb76d4de6f7787915fd0d6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/demons/lust/lust_headshot.png"
-dest_files=["res://.godot/imported/lust_headshot.png-f73b8cc684874bdcb766a9300dcd4f27.ctex"]
+source_file="res://assets/art/demons/wrath/wrath-headshot.png"
+dest_files=["res://.godot/imported/wrath-headshot.png-7ca1afb08eb76d4de6f7787915fd0d6e.ctex"]
 
 [params]
 
