@@ -169,10 +169,10 @@ func _pick_any_unique(pool: Array, existing: Array) -> Dialog:
 	return pool[0]
 
 # what to scale the damage by when progressing the game
-# only scale the player's dialog to make the demon's stronger
+# only scale the player's dialog to make the gained skills stronger
 func _difficulity_scaling(dialog: Dialog) -> float:
 	if dialog.resource_path.split("/")[-2] != "player":
-		return 1.0
+		return 0.7
 
 	var defeated_demons = GameStateManager.demon_states.values().filter(func(v): return v != GameStateManager.DEMON_STATES.AVAILABLE).size()
 
@@ -191,7 +191,7 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 	var text: String = dialog.dialog_text if demon else "You: "+dialog.dialog_text
 	DialogPanel.push_text(text, demon)
 	demon_hp -= int(dialog.damage * _difficulity_scaling(dialog))
-	demon_seduction += dialog.seduction
+	demon_seduction += int(dialog.seduction * _difficulity_scaling(dialog))
 	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
 		AudioManager.play_sfx("hit")
 	else:
@@ -199,7 +199,7 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 
 func _random_partner_attacks() -> void:
 	for demon in GameStateManager.seduced_demons:
-		if randi() % 100 < 100:
+		if randi() % 25 < 100:
 			var demon_turn = _get_demon_turn(demon)
 			_attack_with_dialog(demon_turn, demon)
 			Signals.damage_dealt.emit()
