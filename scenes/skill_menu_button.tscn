@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c47btjjyvj32h"]
+[gd_scene load_steps=3 format=3 uid="uid://bkwy8jcsyjpkq"]
 
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="1_r0oul"]
-[ext_resource type="Script" uid="uid://f7epjum2bf4w" path="res://scripts/skill_menu_button.gd" id="1_v1wbo"]
+[ext_resource type="Script" path="res://scripts/skill_menu_button.gd" id="1_v1wbo"]
 
 [node name="SkillMenuButton" type="Button"]
 custom_minimum_size = Vector2(632, 80)

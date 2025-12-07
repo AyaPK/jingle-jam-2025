@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn8xv4um3j7f2"]
+[gd_scene load_steps=9 format=3 uid="uid://dhgw2x6dqbjt2"]
 
 [ext_resource type="Texture2D" uid="uid://c6dn57wx8f577" path="res://assets/art/Border_filled_red.png" id="1_11ggv"]
-[ext_resource type="Script" uid="uid://c4te7uxxufjxo" path="res://scripts/skills.gd" id="1_46wke"]
+[ext_resource type="Script" path="res://scripts/skills.gd" id="1_46wke"]
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="2_6bbfm"]
 [ext_resource type="Texture2D" uid="uid://i1eothhql2pf" path="res://assets/art/hell.png" id="2_f61yr"]
-[ext_resource type="PackedScene" uid="uid://c47btjjyvj32h" path="res://scenes/skill_menu_button.tscn" id="5_j8gul"]
-[ext_resource type="PackedScene" uid="uid://c2r1y5pt7agec" path="res://scenes/skillmenulabel.tscn" id="5_mo201"]
+[ext_resource type="PackedScene" uid="uid://bkwy8jcsyjpkq" path="res://scenes/skill_menu_button.tscn" id="5_j8gul"]
+[ext_resource type="PackedScene" path="res://scenes/skillmenulabel.tscn" id="5_mo201"]
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="6_mo201"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_11ggv"]

@@ -1,8 +1,8 @@
 extends Node2D
 
-const SKILL_MENU_BUTTON = preload("uid://c47btjjyvj32h")
+const SKILL_MENU_BUTTON = preload("res://scenes/skill_menu_button.tscn")
 @onready var skill_container: VBoxContainer = $CanvasLayer/ScrollContainer/SkillContainer
-const SKILLMENULABEL = preload("uid://c2r1y5pt7agec")
+const SKILLMENULABEL = preload("res://scenes/skillmenulabel.tscn")
 
 func _ready() -> void:
 	for _c in skill_container.get_children():
