@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://i1eothhql2pf" path="res://assets/art/hell.png" id="1_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://chervc6xtbap8" path="res://assets/art/Border_filled_oranget.png" id="2_es4n0"]
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="3_gis3k"]
-[ext_resource type="PackedScene" path="res://scenes/settings_volume_control.tscn" id="4_gis3k"]
+[ext_resource type="PackedScene" uid="uid://cj3d6divj482i" path="res://scenes/settings_volume_control.tscn" id="4_gis3k"]
 [ext_resource type="Texture2D" uid="uid://ds5u8i5fpu1h" path="res://assets/art/Border_filled.png" id="7_83j8s"]
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="7_gjs24"]
 

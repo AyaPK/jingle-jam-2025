@@ -70,15 +70,9 @@ func loot_demon(demon: Demon) -> void:
 	var demon_rare_dialog = demon.battle_dialog.filter(func(dialog: Dialog): return dialog.rarity == Dialog.DIALOG_RARITY.RARE)
 	var demon_ultra_rare_dialog = demon.battle_dialog.filter(func(dialog: Dialog): return dialog.rarity == Dialog.DIALOG_RARITY.ULTRA_RARE)
 	
-	var looted_dialog = [
-		demon_common_dialog.pick_random(),
-		demon_rare_dialog.pick_random(),
-		demon_ultra_rare_dialog.pick_random(),
-	]
-	
-	for dialog in looted_dialog:
-		if (dialog != null):
-			_add_dialog_to_pool(dialog)
+	if (demon_common_dialog.size() > 0): _add_dialog_to_pool(demon_common_dialog.pick_random())
+	if (demon_rare_dialog.size() > 0): _add_dialog_to_pool(demon_rare_dialog.pick_random())
+	if (demon_ultra_rare_dialog.size() > 0): _add_dialog_to_pool(demon_ultra_rare_dialog.pick_random())
 
 func _add_dialog_to_pool(dialog: Dialog) -> void:
 	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
