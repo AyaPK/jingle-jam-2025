@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://sasy7l8mxlvw"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://sasy7l8mxlvw"]
 
 [ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/items/item.gd" id="1_hcr52"]
+[ext_resource type="Script" uid="uid://bebparqbm4kkv" path="res://resources/items/documents.gd" id="1_jyc0w"]
 [ext_resource type="Texture2D" uid="uid://b37w6qgt6v7n1" path="res://assets/art/items/documents.png" id="1_nxby3"]
+
+[sub_resource type="Resource" id="Resource_0elar"]
+script = ExtResource("1_jyc0w")
+metadata/_custom_type_script = "uid://bebparqbm4kkv"
 
 [resource]
 script = ExtResource("1_hcr52")
 item_name = "Documents"
 image = ExtResource("1_nxby3")
+effect = SubResource("Resource_0elar")
 metadata/_custom_type_script = "uid://bladufjcc5r0s"

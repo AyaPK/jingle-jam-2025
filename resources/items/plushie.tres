@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dod8bft4iyarv"]
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://dod8bft4iyarv"]
 
+[ext_resource type="Script" uid="uid://bcyow4sgkl4qh" path="res://resources/items/plushie.gd" id="1_76yfa"]
 [ext_resource type="Script" uid="uid://bladufjcc5r0s" path="res://resources/items/item.gd" id="1_owj7i"]
 [ext_resource type="Texture2D" uid="uid://ciibndlmyftwt" path="res://assets/art/items/plush.png" id="1_w0xax"]
+
+[sub_resource type="Resource" id="Resource_xs10p"]
+script = ExtResource("1_76yfa")
+metadata/_custom_type_script = "uid://bcyow4sgkl4qh"
 
 [resource]
 script = ExtResource("1_owj7i")
 item_name = "Plushie"
 image = ExtResource("1_w0xax")
+effect = SubResource("Resource_xs10p")
 metadata/_custom_type_script = "uid://bladufjcc5r0s"
