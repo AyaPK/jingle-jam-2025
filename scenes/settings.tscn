@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d20ds4nmqfk3e"]
+[gd_scene load_steps=8 format=3 uid="uid://dt3voc5rfnsa"]
 
-[ext_resource type="Script" uid="uid://rgrojkme5iw2" path="res://scripts/settings.gd" id="1_es4n0"]
+[ext_resource type="Script" path="res://scripts/settings.gd" id="1_es4n0"]
 [ext_resource type="Texture2D" uid="uid://i1eothhql2pf" path="res://assets/art/hell.png" id="1_f4mfi"]
 [ext_resource type="Texture2D" uid="uid://chervc6xtbap8" path="res://assets/art/Border_filled_oranget.png" id="2_es4n0"]
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="3_gis3k"]
-[ext_resource type="Script" uid="uid://c5cdka3cki5rd" path="res://scripts/settings_main_menu_button.gd" id="4_83j8s"]
+[ext_resource type="Script" path="res://scripts/settings_main_menu_button.gd" id="4_83j8s"]
 [ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="4_gis3k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjs24"]
@@ -20,9 +20,11 @@ script = ExtResource("1_es4n0")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_right = 1221.0
+offset_left = -30.0
+offset_right = 1191.0
 offset_bottom = 666.0
 texture = ExtResource("1_f4mfi")
+metadata/_edit_use_anchors_ = true
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
 offset_left = 211.0

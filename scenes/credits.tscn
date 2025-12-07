@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://doqc6f5i4628u"]
+
+[ext_resource type="Script" uid="uid://jafo4ukvcklw" path="res://scripts/credits.gd" id="1_2fbfq"]
+[ext_resource type="Texture2D" uid="uid://i1eothhql2pf" path="res://assets/art/hell.png" id="1_83ncp"]
+[ext_resource type="Texture2D" uid="uid://chervc6xtbap8" path="res://assets/art/Border_filled_oranget.png" id="2_2ckv8"]
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="12_gyrtj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ctdu"]
+texture = ExtResource("2_2ckv8")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_2fbfq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = -30.0
+offset_right = 1191.0
+offset_bottom = 666.0
+texture = ExtResource("1_83ncp")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.5
+offset_top = -256.0
+offset_right = 288.5
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0ctdu")
+
+[node name="Back" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.5
+offset_top = -125.0
+offset_right = 91.5
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("12_gyrtj")
+theme_override_font_sizes/font_size = 60
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/Back" to="." method="_on_back_pressed"]

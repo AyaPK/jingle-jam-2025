@@ -21,9 +21,11 @@ script = ExtResource("1_46wke")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_right = 1221.0
+offset_left = -30.0
+offset_right = 1191.0
 offset_bottom = 666.0
 texture = ExtResource("2_f61yr")
+metadata/_edit_use_anchors_ = true
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
 anchors_preset = 8

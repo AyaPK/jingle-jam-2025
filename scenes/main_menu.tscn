@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bfhslpx3f8pml"]
+[gd_scene load_steps=17 format=3 uid="uid://bfhslpx3f8pml"]
 
 [ext_resource type="Script" uid="uid://p76dtda487i8" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 [ext_resource type="PackedScene" uid="uid://8jvy4ghanp55" path="res://scenes/demon_button.tscn" id="2_ekxnf"]
@@ -13,7 +13,9 @@
 [ext_resource type="Resource" uid="uid://kqplkbwouifd" path="res://resources/demons/pride.tres" id="9_1ajci"]
 [ext_resource type="Resource" uid="uid://vor6hqiyihqc" path="res://resources/demons/sloth.tres" id="10_7b55j"]
 [ext_resource type="Script" path="res://scripts/main_menu_settings.gd" id="12_rcqid"]
+[ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="13_7b55j"]
 [ext_resource type="Texture2D" uid="uid://b1qjlknylccro" path="res://assets/art/logo.png" id="14_1ajci"]
+[ext_resource type="Script" uid="uid://k4kacsn6ysvq" path="res://scripts/credits_button.gd" id="14_5pajh"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_l6cm7")
@@ -21,9 +23,11 @@ script = ExtResource("1_l6cm7")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_right = 1221.0
+offset_left = -30.0
+offset_right = 1191.0
 offset_bottom = 666.0
 texture = ExtResource("2_flqon")
+metadata/_edit_use_anchors_ = true
 
 [node name="HFlowContainer" type="HFlowContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -83,9 +87,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -400.0
+offset_left = -550.0
 offset_top = -80.0
-offset_right = 400.0
+offset_right = 550.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 6
@@ -97,24 +101,24 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../../HFlowContainer/GreedButton")
 text = "Skills"
 
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-text = "                      "
-
 [node name="PartnersButton" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HFlowContainer/PrideButton")
 text = "Partners"
-
-[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
-layout_mode = 2
-text = "                      "
 
 [node name="SettingsButton" parent="CanvasLayer/HBoxContainer" instance=ExtResource("3_bqqt6")]
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HFlowContainer/SlothButton")
 text = "Settings"
 script = ExtResource("12_rcqid")
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("13_7b55j")
+theme_override_font_sizes/font_size = 45
+text = "Credits"
+script = ExtResource("14_5pajh")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 anchors_preset = 8
@@ -136,7 +140,7 @@ bbcode_enabled = true
 text = " Choose an opponent"
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(617, 117)
+position = Vector2(588, 117)
 scale = Vector2(5.4555926, 5.455592)
 texture = ExtResource("14_1ajci")
 
@@ -148,3 +152,6 @@ texture = ExtResource("14_1ajci")
 
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/HBoxContainer/SettingsButton" to="CanvasLayer/HBoxContainer/SettingsButton" method="_on_pressed"]
+[connection signal="focus_entered" from="CanvasLayer/HBoxContainer/CreditsButton" to="CanvasLayer/HBoxContainer/CreditsButton" method="_on_focus_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/HBoxContainer/CreditsButton" to="CanvasLayer/HBoxContainer/CreditsButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/HBoxContainer/CreditsButton" to="CanvasLayer/HBoxContainer/CreditsButton" method="_on_pressed"]
