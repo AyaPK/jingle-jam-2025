@@ -17,3 +17,9 @@ class_name Demon extends Resource
 @export_multiline var lose_text: String
 
 @export var battle_dialog: Array[Dialog]
+
+var battle_insult_dialog: Array[Dialog]:
+	get: return battle_dialog.filter(func(dialog): return dialog.type == Dialog.DIALOG_TYPE.ATTACK)
+
+var battle_seduce_dialog: Array[Dialog]:
+	get: return battle_dialog.filter(func(dialog): return dialog.type == Dialog.DIALOG_TYPE.SEDUCE)

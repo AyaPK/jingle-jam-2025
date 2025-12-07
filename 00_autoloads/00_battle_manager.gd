@@ -215,5 +215,9 @@ func _random_partner_attacks() -> void:
 	Signals.demon_turns_finished.emit()
 
 func _get_demon_turn(demon: Demon) -> Dialog:
-	# TODO: More complicated logic here?
-	return demon.battle_dialog.pick_random()
+	var seduction_weight := (float(demon_seduction) / float(current_demon.seduction_target)) * 100
+	var capped_weight = clamp(seduction_weight, 5, 70)
+	if randi() % 100 < capped_weight:
+		return demon.battle_seduce_dialog.pick_random()
+	else:
+		return demon.battle_insult_dialog.pick_random()
