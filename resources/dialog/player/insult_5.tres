@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_4wkww")
-name = "Weak intimidation"
+name = "You call that intimidation"
 dialog_text = "If this is your idea of intimidation, then Hell really is running out of talent."
 damage = 15
 seduction = 3

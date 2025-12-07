@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_2yopd")
-name = "Fragile"
+name = "You're so fragile"
 dialog_text = "You fall apart the second someone doesn’t bow to you. How fragile."
 damage = 17
 seduction = 5

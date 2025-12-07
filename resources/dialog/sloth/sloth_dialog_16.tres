@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_8lipc")
-name = "Pulse"
+name = "Getting nervous"
 dialog_text = "Ugh. Look what you’ve done. You've gone and made my pulse pick up a little"
 type = 1
 damage = 10

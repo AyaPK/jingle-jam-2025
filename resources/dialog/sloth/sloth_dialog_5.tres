@@ -8,5 +8,5 @@ name = "Maybe we can nap together"
 dialog_text = "If you want to hang out that bad maybe we can nap together"
 type = 1
 damage = 5
-seduction = 10
+seduction = 15
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

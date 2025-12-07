@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_d8xf1")
-name = "Try"
-dialog_text = "You try so hard to proove yourself… and yet all I feel is the urge to sleep through your failure"
+name = "Prove yourself"
+dialog_text = "You try so hard to prove yourself… and yet all I feel is the urge to sleep through your failure"
 damage = 12
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

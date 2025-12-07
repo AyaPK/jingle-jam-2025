@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_cte6o")
-name = "You disgust me "
+name = "You disgust me"
 dialog_text = "Your energy disgusts me. It flails around, desperate to matter. It won’t"
 damage = 12
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

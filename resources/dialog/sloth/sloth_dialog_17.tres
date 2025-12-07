@@ -6,6 +6,7 @@
 script = ExtResource("1_3scn0")
 name = "Go slow"
 dialog_text = "If you’re going to tease me, at least do it slowly. I like slow"
+rarity = 1
 type = 1
 damage = 5
 seduction = 30

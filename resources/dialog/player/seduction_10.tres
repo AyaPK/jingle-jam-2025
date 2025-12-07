@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://b577ldqkcqdgr"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_na5q8"]
+
+[resource]
+script = ExtResource("1_na5q8")
+name = "Stop flirting with me"
+dialog_text = "If seduction-by-menace is your strategy, it’s annoyingly effective. You can stop looming over me now... unless you don’t want to"
+rarity = 2
+type = 1
+seduction = 25
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

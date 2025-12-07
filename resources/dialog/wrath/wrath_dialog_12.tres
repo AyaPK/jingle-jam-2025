@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_e5kbq")
-name = "Ragretz"
+name = "Step close to me"
 dialog_text = "I could make you regret stepping near me… or make you crave it. Which do you prefer?"
 rarity = 1
 type = 1

@@ -54,11 +54,11 @@ func refresh() -> void:
 	inventory.append(flowers)
 	inventory.append(dagger)
 	
-	for i in range(1, 7):
+	for i in range(1, 13):
 		var insult_dialog = load("res://resources/dialog/player/insult_" + str(i) + ".tres")
 		insult_dialog_pool.append(insult_dialog)
 		
-	for i in range(1, 7):
+	for i in range(1, 13):
 		var seduction_dialog = load("res://resources/dialog/player/seduction_" + str(i) + ".tres")
 		seduction_dialog_pool.append(seduction_dialog)
 

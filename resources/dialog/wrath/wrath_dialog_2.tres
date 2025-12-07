@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_jsjeq")
-name = "Rot"
+name = "You should rot"
 dialog_text = "I’ve seen mortals rot into the ground with more dignity than you show standing upright."
 rarity = 1
 damage = 15

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Dialog" load_steps=2 format=3 uid="uid://beqmuqajwnmpg"]
+
+[ext_resource type="Script" uid="uid://c4gsgqhrfpf7" path="res://resources/dialog/dialog.gd" id="1_6ywch"]
+
+[resource]
+script = ExtResource("1_6ywch")
+name = "Attention seeker"
+dialog_text = "You’re terrible at being evil... but annoyingly good at getting my attention"
+rarity = 1
+type = 1
+damage = 5
+seduction = 15
+metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

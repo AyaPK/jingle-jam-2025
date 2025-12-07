@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_ow67r")
-name = "Drain"
+name = "You're draining"
 dialog_text = "Your presence drains motivation more effectively than I ever could, and that’s literally my specialty"
 rarity = 1
 damage = 15

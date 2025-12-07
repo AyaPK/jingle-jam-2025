@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_s3fxw")
-name = "Your best? Pathetic"
+name = "You're pathetic"
 dialog_text = "Is that really your best? I’ve met imps with more bite than you."
 damage = 10
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_hka2n")
-name = "Toddlers"
+name = "You toddler"
 dialog_text = "You call that fighting? I’ve seen toddlers swing sticks with more skill"
 damage = 10
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

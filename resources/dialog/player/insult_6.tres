@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_5ncje")
-name = "Your ego crumbles"
+name = "Your ego is crumbling"
 dialog_text = "I don’t need to hit you, your ego is collapsing just fine on its own."
 rarity = 1
 damage = 20

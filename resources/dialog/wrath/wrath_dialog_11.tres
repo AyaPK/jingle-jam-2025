@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_ulc7c")
-name = "Punish"
+name = "I'll punish you"
 dialog_text = "You’re infuriating. I want to punish you. I want to possess you. Maybe both"
 type = 1
 damage = 5

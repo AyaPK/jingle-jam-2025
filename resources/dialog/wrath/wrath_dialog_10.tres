@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_60xg7")
-name = "Tear apart"
+name = "I'll tear your apart"
 dialog_text = "One look at you, and I want to tear something apart… maybe you"
 type = 1
 damage = 10

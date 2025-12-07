@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_x0cyx")
-name = "Talk too much"
+name = "You talk a lot"
 dialog_text = "Mm… you talk too much. But your voice is comfortable. Keep going"
 type = 1
 damage = 5

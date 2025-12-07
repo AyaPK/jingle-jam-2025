@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_5pcuy")
-name = "Whole"
+name = "Give me your belongings"
 dialog_text = "Look at you… walking around with things I’ll never have. I should rip them from you just to feel whole"
 damage = 10
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"
