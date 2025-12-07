@@ -45,10 +45,7 @@ func execute_turn() -> void:
 	Signals.battle_single_turn.emit()
 	
 	# Partner interjection
-	_random_partner_attacks()
-	
-	if GameStateManager.has_any_partners:
-		await Signals.demon_turns_finished
+	await _random_partner_attacks()
 	
 	# Battle end checks?
 	if demon_hp <= 0:
@@ -206,13 +203,12 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 
 func _random_partner_attacks() -> void:
 	for demon in GameStateManager.seduced_demons:
-		if randi() % 25 < 100:
+		if randi() % 100 < 25:
 			var demon_turn = _get_demon_turn(demon)
 			_attack_with_dialog(demon_turn, demon)
 			Signals.damage_dealt.emit()
 			await Signals.dialog_finished
 			Signals.battle_single_turn.emit()
-	Signals.demon_turns_finished.emit()
 
 func _get_demon_turn(demon: Demon) -> Dialog:
 	var seduction_weight := (float(demon_seduction) / float(current_demon.seduction_target)) * 100
