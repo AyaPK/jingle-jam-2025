@@ -40,6 +40,17 @@ func _ready() -> void:
 	Signals.battle_demon_seduced.connect(seduce_demon)
 	Signals.battle_left.connect(process_battle_left)
 
+func refresh() -> void:
+	demon_states = {
+	ENVY.internal_name: DEMON_STATES.AVAILABLE,
+	GLUTTONY.internal_name: DEMON_STATES.AVAILABLE,
+	GREED.internal_name: DEMON_STATES.AVAILABLE,
+	LUST.internal_name: DEMON_STATES.AVAILABLE,
+	PRIDE.internal_name: DEMON_STATES.AVAILABLE,
+	SLOTH.internal_name: DEMON_STATES.AVAILABLE,
+	WRATH.internal_name: DEMON_STATES.AVAILABLE
+	}
+
 func beat_demon() -> void:
 	var demon = BattleManager.current_demon
 	demon_states[demon.internal_name] = DEMON_STATES.BEATEN

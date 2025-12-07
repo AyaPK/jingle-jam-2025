@@ -101,6 +101,7 @@ func _end_battle() -> void:
 
 func leave_battle() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	SaveManager.save_game()
 	Signals.battle_left.emit()
 	battle_state = STATES.NOT_IN_BATTLE
 

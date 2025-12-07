@@ -35,6 +35,31 @@ func _ready() -> void:
 		var seduction_dialog = load("res://resources/dialog/player/seduction_" + str(i) + ".tres")
 		seduction_dialog_pool.append(seduction_dialog)
 
+func refresh() -> void:
+	inventory = []
+	var chocolate: Item = preload("res://resources/items/chocolate.tres")
+	var flowers: Item = preload("res://resources/items/flowers.tres")
+	var dagger: Item = preload("res://resources/items/dagger.tres")
+	var mirror: Item = preload("res://resources/items/mirror.tres")
+	var watch: Item = preload("res://resources/items/watch.tres")
+	var documents: Item = preload("res://resources/items/documents.tres")
+	var plushie: Item = preload("res://resources/items/plushie.tres")
+	inventory.append(chocolate)
+	inventory.append(documents)
+	inventory.append(watch)
+	inventory.append(mirror)
+	inventory.append(plushie)
+	inventory.append(flowers)
+	inventory.append(dagger)
+	
+	for i in range(1, 7):
+		var insult_dialog = load("res://resources/dialog/player/insult_" + str(i) + ".tres")
+		insult_dialog_pool.append(insult_dialog)
+		
+	for i in range(1, 7):
+		var seduction_dialog = load("res://resources/dialog/player/seduction_" + str(i) + ".tres")
+		seduction_dialog_pool.append(seduction_dialog)
+
 func reset_player_health() -> void:
 	hp = MAX_HP
 

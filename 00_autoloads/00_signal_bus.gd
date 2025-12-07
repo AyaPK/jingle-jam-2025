@@ -20,3 +20,8 @@ signal battle_options_refreshed
 signal damage_dealt
 signal demon_turns_finished
 #endregion
+
+#region SaveLoad System
+signal game_saved
+signal game_loaded
+#endregion

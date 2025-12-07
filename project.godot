@@ -23,6 +23,7 @@ BattleManager="*res://00_autoloads/00_battle_manager.gd"
 GameStateManager="*res://00_autoloads/00_game_state_manager.gd"
 DialogPanel="*res://scenes/dialog_panel.tscn"
 AudioManager="*res://00_autoloads/00_audio_manager.gd"
+SaveManager="*res://00_autoloads/00_save_manager.gd"
 
 [debug]
 
