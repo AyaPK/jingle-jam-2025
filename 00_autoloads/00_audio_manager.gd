@@ -1,7 +1,11 @@
 extends Node
 
+@export var master_bus_name: String = "Master"
 @export var music_bus_name: String = "Music"
 @export var sfx_bus_name: String = "SFX"
+
+var master_bus_idx: int:
+	get: return AudioServer.get_bus_index(master_bus_name)
 
 var music_bus_idx: int:
 	get: return AudioServer.get_bus_index(music_bus_name)

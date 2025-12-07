@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj3d6divj482i"]
+
+[ext_resource type="Script" uid="uid://cwaps5x5xfity" path="res://scripts/settings_volume_control.gd" id="1_m0dmb"]
+[ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="2_r2b0b"]
+
+[node name="SettingsVolumeControl" type="HBoxContainer"]
+script = ExtResource("1_m0dmb")
+
+[node name="Buffer1" type="Label" parent="."]
+layout_mode = 2
+text = "             "
+
+[node name="BusLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r2b0b")
+theme_override_font_sizes/font_size = 26
+text = "Bus:"
+
+[node name="Buffer2" type="Label" parent="."]
+layout_mode = 2
+text = "       "
+
+[node name="MuteLabel" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r2b0b")
+theme_override_font_sizes/font_size = 26
+text = "Mute"
+
+[node name="MuteCheckBox" type="CheckBox" parent="."]
+layout_mode = 2
+
+[node name="Buffer3" type="Label" parent="."]
+layout_mode = 2
+text = "       "
+
+[node name="VolumeLabel" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_r2b0b")
+theme_override_font_sizes/font_size = 26
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="Buffer4" type="Label" parent="."]
+layout_mode = 2
+text = "             "
+
+[connection signal="toggled" from="MuteCheckBox" to="." method="_on_mute_check_box_toggled"]
+[connection signal="value_changed" from="VolumeSlider" to="." method="_on_volume_value_changed"]
