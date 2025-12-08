@@ -16,7 +16,7 @@ func fade_sequence():
 	await fade_in(prelude, 1.0)
 	
 	# Wait
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(3.0).timeout
 	
 	# Fade out node 1
 	await fade_out(prelude, 1.0)
