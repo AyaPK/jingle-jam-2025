@@ -4,8 +4,9 @@
 
 [resource]
 script = ExtResource("1_doo43")
-name = "hold your liquor"
+name = "Try holding your dignity"
 dialog_text = "If you can’t hold your liquor, at least try holding your dignity."
-damage = 15
+rarity = 2
+damage = 25
 seduction = 15
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

@@ -6,6 +6,6 @@
 script = ExtResource("1_pypl6")
 name = "  Sell it back for a profit"
 dialog_text = "I’d steal your heart… but I’d probably sell it back for a profit."
-damage = 19
+damage = 10
 seduction = 10
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

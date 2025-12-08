@@ -6,7 +6,8 @@
 script = ExtResource("1_0l0i7")
 name = "Want to nibble"
 dialog_text = "If I said I wanted a nibble, would you think I meant the food?"
+rarity = 2
 type = 1
 damage = 10
-seduction = 15
+seduction = 24
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

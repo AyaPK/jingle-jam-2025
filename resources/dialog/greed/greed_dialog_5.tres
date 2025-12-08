@@ -6,6 +6,7 @@
 script = ExtResource("1_cufqh")
 name = "Your ambition is adorable"
 dialog_text = "Your ambition is adorable, like a puppy chasing coins"
-damage = 13
+rarity = 1
+damage = 17
 seduction = 10
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

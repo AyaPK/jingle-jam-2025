@@ -6,6 +6,7 @@
 script = ExtResource("1_51oic")
 name = "disapointed in this main course"
 dialog_text = "If you’re the main course, I’m already disappointed."
-damage = 15
+rarity = 1
+damage = 20
 seduction = 5
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

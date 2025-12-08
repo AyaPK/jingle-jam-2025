@@ -6,7 +6,8 @@
 script = ExtResource("1_5myoh")
 name = "Offer yourself properly"
 dialog_text = "Offer yourself properly, and maybe I’ll let you share in my fortune."
+rarity = 1
 type = 1
 damage = 10
-seduction = 20
+seduction = 25
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

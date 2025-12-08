@@ -6,7 +6,8 @@
 script = ExtResource("1_lf43q")
 name = "I'll take what I want"
 dialog_text = "I want you. And when I want something, I take it."
+rarity = 2
 type = 1
-damage = 10
-seduction = 20
+damage = 15
+seduction = 30
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

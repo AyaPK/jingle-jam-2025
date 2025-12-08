@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_lgktr")
-name = "I've had tastier"
+name = "I've had richer"
 dialog_text = "Sweet thing, you’re looking like a snack... though honestly, I’ve had richer, tastier, and far more satisfying prey"
 damage = 10
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"
