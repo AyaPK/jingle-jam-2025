@@ -193,8 +193,10 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 	demon_hp -= int(dialog.damage * _difficulity_scaling(dialog))
 	demon_seduction += int(dialog.seduction * _difficulity_scaling(dialog))
 	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
+		Signals.battle_demon_insult_dealt.emit()
 		AudioManager.play_sfx("hit")
 	else:
+		Signals.battle_demon_seduction_dealt.emit()
 		AudioManager.play_sfx("seduce")
 
 func _random_partner_attacks() -> void:
