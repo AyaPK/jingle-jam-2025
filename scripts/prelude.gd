@@ -16,7 +16,7 @@ func fade_sequence():
 	await fade_in(prelude, 1.0)
 	
 	# Wait
-	await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(7.0).timeout
 	
 	# Fade out node 1
 	await fade_out(prelude, 1.0)
@@ -28,7 +28,9 @@ func fade_sequence():
 	await fade_in(logo, 1.0)
 	
 	# Wait
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(4.0).timeout
+	
+	await fade_out(logo, 1.0)
 	
 	# Transition to next scene
 	PreludeManager.prelude_shown = true

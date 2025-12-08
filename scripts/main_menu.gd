@@ -3,9 +3,13 @@ extends Node2D
 
 func _ready() -> void:
 	if not PreludeManager.prelude_shown:
-		get_tree().change_scene_to_file("res://scenes/prelude.tscn")
-	button.grab_focus()
+		call_deferred("_go_to_prelude")
+	else:
+		button.grab_focus()
 	AudioManager.play_music("menu")
+
+func _go_to_prelude() -> void:
+	get_tree().change_scene_to_file("res://scenes/prelude.tscn")
 
 func _process(_delta: float) -> void:
 	pass
