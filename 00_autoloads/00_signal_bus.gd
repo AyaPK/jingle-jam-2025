@@ -19,6 +19,7 @@ signal battle_end
 signal battle_options_refreshed
 signal damage_dealt
 signal battle_demon_seduction_dealt
+signal battle_demon_insult_dealt
 #endregion
 
 #region SaveLoad System

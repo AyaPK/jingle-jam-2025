@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://beehljnlageaq"]
+[gd_scene load_steps=24 format=3 uid="uid://beehljnlageaq"]
 
 [ext_resource type="Script" uid="uid://dx1heefco4bqt" path="res://scripts/battle.gd" id="1_p1qf1"]
 [ext_resource type="Texture2D" uid="uid://35mqgxpe0kjo" path="res://assets/art/battle_background.png" id="2_v7i3o"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://2ulje1xv2gqj" path="res://assets/art/heart.png" id="10_vceff"]
 [ext_resource type="Script" uid="uid://2flwwihg4561" path="res://scripts/opponent_hp_display.gd" id="11_03edq"]
 [ext_resource type="Texture2D" uid="uid://dnv1t5jjajrnp" path="res://assets/art/ui/progress_transparent.png" id="11_6ni85"]
+[ext_resource type="Script" uid="uid://b36xvlkocm58m" path="res://scripts/opponent.gd" id="11_ekamt"]
 [ext_resource type="Script" uid="uid://clrio0i25564" path="res://scripts/player_hp_display.gd" id="12_03edq"]
 [ext_resource type="Texture2D" uid="uid://c10p2s7q787qq" path="res://assets/art/ui/progress_red.png" id="12_vceff"]
 
@@ -202,6 +203,7 @@ script = ExtResource("8_yahae")
 position = Vector2(870.25, 356.48145)
 scale = Vector2(2.6035159, 2.7028623)
 texture = ExtResource("6_6vh42")
+script = ExtResource("11_ekamt")
 
 [node name="Heart" type="AnimatedSprite2D" parent="CanvasLayer"]
 visible = false
@@ -209,7 +211,7 @@ position = Vector2(679.00006, 163.00002)
 scale = Vector2(3.7187483, 3.7187507)
 sprite_frames = SubResource("SpriteFrames_61i1y")
 autoplay = "default"
-frame_progress = 0.750488
+frame_progress = 0.531459
 
 [node name="OpponentHP" type="TextureProgressBar" parent="CanvasLayer"]
 offset_left = 502.0
