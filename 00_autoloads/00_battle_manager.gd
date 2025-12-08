@@ -124,15 +124,11 @@ func get_dialog_options() -> Array[Dialog]:
 
 	for i in range(4):
 		var selected_dialog = null
-		var pool
+		var can_choose_seduction = i != 3 or results.any(func(dialog): return dialog.type == Dialog.DIALOG_TYPE.ATTACK)
+		var choose_seduction: bool = randf() < seduction_weight
+		var pool = seduction_pool if can_choose_seduction and choose_seduction else insult_pool
 		for attempt in range(10):  # try multiple times to find a unique one
-			var choose_seduction: bool = randf() < seduction_weight
-			pool = seduction_pool if choose_seduction else insult_pool
-			if pool.is_empty():
-				pool = insult_pool if choose_seduction else seduction_pool
-
 			var candidate = _choose_weighted_dialog(pool)
-
 			if candidate not in results:
 				selected_dialog = candidate
 				break
@@ -203,7 +199,7 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 
 func _random_partner_attacks() -> void:
 	for demon in GameStateManager.seduced_demons:
-		if randi() % 100 < (25.0 * (1.0 - seduction_percentage)):
+		if randi() % 100 < (25.0 * (1.0 - (seduction_percentage/2.0))):
 			var demon_turn = _get_demon_turn(demon)
 			_attack_with_dialog(demon_turn, demon)
 			Signals.damage_dealt.emit()
