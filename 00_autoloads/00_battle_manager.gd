@@ -61,6 +61,8 @@ func execute_turn() -> void:
 	# Demon turn
 	DialogPanel.push_text(demon_turn.dialog_text, current_demon)
 	PlayerManager.hp -= demon_turn.damage
+	if demon_turn.damage > 0:
+		Signals.battle_demon_did_damage.emit()
 	Signals.damage_dealt.emit()
 	await Signals.dialog_finished
 	
