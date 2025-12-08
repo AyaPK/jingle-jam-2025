@@ -6,6 +6,7 @@
 script = ExtResource("1_tmeww")
 name = "I could toy with you endlessly"
 dialog_text = "I could toy with you endlessly, and you’d probably enjoy every moment. That thought alone makes me smile"
+rarity = 2
 type = 1
 damage = 10
 seduction = 40

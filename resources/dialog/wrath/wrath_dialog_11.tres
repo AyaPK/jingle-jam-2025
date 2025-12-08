@@ -6,7 +6,8 @@
 script = ExtResource("1_ulc7c")
 name = "I'll punish you"
 dialog_text = "You’re infuriating. I want to punish you. I want to possess you. Maybe both"
+rarity = 2
 type = 1
-damage = 5
-seduction = 5
+damage = 10
+seduction = 30
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"

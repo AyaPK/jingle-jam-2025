@@ -6,7 +6,8 @@
 script = ExtResource("1_m8htl")
 name = "Beyond your imagination"
 dialog_text = "I could show you pleasure beyond your imagination… but I might grow bored halfway through"
+rarity = 1
 type = 1
 damage = 10
-seduction = 10
+seduction = 17
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"
