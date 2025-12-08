@@ -21,6 +21,7 @@ var menu_state = MenuState.HOME;
 @onready var battle_over_win_text: RichTextLabel = $CanvasLayer/BattleOverMenu/PanelContainer/YouWinText
 @onready var opponent_hp: TextureProgressBar = $CanvasLayer/OpponentHP
 @onready var player_hp: TextureProgressBar = $CanvasLayer/PlayerHP
+@onready var heart: AnimatedSprite2D = $CanvasLayer/Heart
 
 const BATTLE_ITEM_BUTTON = preload("res://scenes/battle_item_button.tscn")
 const DIALOG_BUTTON = preload("res://scenes/dialog_option.tscn")
@@ -42,6 +43,7 @@ func _ready() -> void:
 	Signals.battle_demon_beaten.connect(set_demon_beaten)
 	Signals.battle_demon_seduced.connect(set_demon_seduced)
 	Signals.damage_dealt.connect(update_ui)
+	Signals.battle_demon_seduction_dealt.connect(_on_seduction_dealt)
 	
 	AudioManager.play_music("battle")
 
@@ -49,6 +51,11 @@ func show_main_buttons() -> void:
 	fight.grab_focus()
 	main_buttons_container.show()
 	_load_item_buttons()
+
+func _on_seduction_dealt() -> void:
+	heart.show()
+	await get_tree().create_timer(2).timeout
+	heart.hide()
 
 func _load_item_buttons() -> void:
 	for _c in battle_item_container.get_children():

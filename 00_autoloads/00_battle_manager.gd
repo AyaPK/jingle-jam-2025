@@ -195,6 +195,7 @@ func _attack_with_dialog(dialog: Dialog, demon: Demon = null) -> void:
 	if dialog.type == Dialog.DIALOG_TYPE.ATTACK:
 		AudioManager.play_sfx("hit")
 	else:
+		Signals.battle_demon_seduction_dealt.emit()
 		AudioManager.play_sfx("seduce")
 
 func _random_partner_attacks() -> void:
