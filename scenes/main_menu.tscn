@@ -12,10 +12,10 @@
 [ext_resource type="Resource" uid="uid://blh4fsdmtksoy" path="res://resources/demons/greed.tres" id="8_rcqid"]
 [ext_resource type="Resource" uid="uid://kqplkbwouifd" path="res://resources/demons/pride.tres" id="9_1ajci"]
 [ext_resource type="Resource" uid="uid://vor6hqiyihqc" path="res://resources/demons/sloth.tres" id="10_7b55j"]
-[ext_resource type="Script" uid="uid://6on4yuwjfvom" path="res://scripts/main_menu_settings.gd" id="12_rcqid"]
+[ext_resource type="Script" path="res://scripts/main_menu_settings.gd" id="12_rcqid"]
 [ext_resource type="Theme" uid="uid://b7rdkq8l5i5od" path="res://themes/menu_button_theme.tres" id="13_7b55j"]
 [ext_resource type="Texture2D" uid="uid://b1qjlknylccro" path="res://assets/art/logo.png" id="14_1ajci"]
-[ext_resource type="Script" path="res://scripts/credits_button.gd" id="14_5pajh"]
+[ext_resource type="Script" uid="uid://k4kacsn6ysvq" path="res://scripts/credits_button.gd" id="14_5pajh"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_l6cm7")
