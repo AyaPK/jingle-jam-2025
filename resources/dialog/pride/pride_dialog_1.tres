@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_rc5l2")
 name = "Careful darling"
-dialog_text = "Careful, darling... Standing this close to me might give you ideas above your station. But I suppose even mortals deserve to gaze at perfection before they crumble"
+dialog_text = "Careful, darling... Standing this close to me might give you ideas above your station."
 damage = 10
 metadata/_custom_type_script = "uid://c4gsgqhrfpf7"
