@@ -2,8 +2,11 @@ extends Node
 
 const SAVE_PATH := "user://savegame.json"
 
+var save_exists: bool:
+	get: return FileAccess.file_exists(SAVE_PATH)
+
 func _ready() -> void:
-	if FileAccess.file_exists(SAVE_PATH):
+	if save_exists:
 		load_game()
 
 func save_game() -> void:
@@ -23,7 +26,7 @@ func save_game() -> void:
 		f.close()
 
 func load_game() -> void:
-	if not FileAccess.file_exists(SAVE_PATH):
+	if not save_exists:
 		return
 	var f := FileAccess.open(SAVE_PATH, FileAccess.READ)
 	if not f:
@@ -87,7 +90,7 @@ func _safe_load_resource(path: String) -> Resource:
 
 
 func delete_data(restart: bool = true) -> void:
-	if FileAccess.file_exists(SAVE_PATH):
+	if save_exists:
 		DirAccess.remove_absolute(SAVE_PATH)
 	
 	PlayerManager.refresh()

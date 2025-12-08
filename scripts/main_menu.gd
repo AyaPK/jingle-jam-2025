@@ -2,8 +2,9 @@ extends Node2D
 @onready var button: Button = $CanvasLayer/HFlowContainer/WrathButton
 
 func _ready() -> void:
+	if not PreludeManager.prelude_shown:
+		get_tree().change_scene_to_file("res://scenes/prelude.tscn")
 	button.grab_focus()
-
 	AudioManager.play_music("menu")
 
 func _process(_delta: float) -> void:

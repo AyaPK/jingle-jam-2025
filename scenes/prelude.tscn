@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctqx6ec54hmpu"]
+
+[ext_resource type="Script" uid="uid://b6lyha4k5yn7e" path="res://scripts/prelude.gd" id="1_migic"]
+[ext_resource type="Texture2D" uid="uid://b1qjlknylccro" path="res://assets/art/logo.png" id="2_dmbxl"]
+[ext_resource type="FontFile" uid="uid://hr5hln5rimjr" path="res://assets/fonts/m5x7.ttf" id="3_redam"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_yk686"]
+
+[node name="Prelude" type="Node2D"]
+script = ExtResource("1_migic")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0.02745098, 1)
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 1154.0
+offset_bottom = 652.0
+texture = SubResource("CanvasTexture_yk686")
+
+[node name="Logo" type="TextureRect" parent="."]
+offset_left = 299.0
+offset_top = 176.0
+offset_right = 894.35
+offset_bottom = 419.0
+texture = ExtResource("2_dmbxl")
+
+[node name="PreludeText" type="VBoxContainer" parent="."]
+offset_right = 1157.0
+offset_bottom = 651.0
+theme_override_constants/separation = 55
+alignment = 1
+
+[node name="Label" type="Label" parent="PreludeText"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_redam")
+theme_override_font_sizes/font_size = 50
+text = "You find yourself in hell..."
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PreludeText"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_redam")
+theme_override_font_sizes/font_size = 50
+text = "The Seven Rulers of hell have been chatting shit about you"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="PreludeText"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_redam")
+theme_override_font_sizes/font_size = 50
+text = "Defend your honour or suffer defeat"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="PreludeText"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_redam")
+theme_override_font_sizes/font_size = 50
+text = "Unless there's another way..."
+horizontal_alignment = 1
